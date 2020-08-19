@@ -1,0 +1,7 @@
+{
+  "Guid": "5082ff8e-851c-4521-90b1-fc0ef296018e",
+  "Name": "Template module",
+  "Description": "A template module",
+  "Version": "1.0.0.0",
+  "Main": "ModuleProject.dll"
+}

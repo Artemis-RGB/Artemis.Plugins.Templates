@@ -1,16 +1,16 @@
 ﻿using Artemis.Core.Plugins.Abstract.ViewModels;
 using Artemis.UI.Shared.Services.Interfaces;
 
-namespace ModuleProject.ViewModels
+namespace $safeprojectname$.ViewModels
 {
-    public class TemplateViewModel : ModuleViewModel
+    public class CustomViewModel : ModuleViewModel
     {
         private readonly IDialogService _dialogService;
         private string _testString;
         private int _testNumber;
 
         // Note how we can inject the IDialogService or any other service into our view model using dependency injection
-        public TemplateViewModel(TemplateModule module, string displayName, IDialogService dialogService) : base(module, displayName)
+        public CustomViewModel(PluginModule module, string displayName, IDialogService dialogService) : base(module, displayName)
         {
             _dialogService = dialogService;
         }

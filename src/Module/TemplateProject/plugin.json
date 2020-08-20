@@ -1,7 +1,7 @@
 {
-  "Guid": "5082ff8e-851c-4521-90b1-fc0ef296018e",
-  "Name": "Template module",
-  "Description": "A template module",
+  "Guid": "$PluginGuid$",
+  "Name": "$PluginName$",
+  "Description": "$PluginDescription$",
   "Version": "1.0.0.0",
-  "Main": "ModuleProject.dll"
+  "Main": "PluginModule.dll"
 }

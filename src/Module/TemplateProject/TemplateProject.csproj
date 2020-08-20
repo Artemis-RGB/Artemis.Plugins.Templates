@@ -3,13 +3,14 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
+    <AssemblyName>PluginModule</AssemblyName>
     
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MaterialDesignThemes" Version="3.1.3" />
-    <PackageReference Include="SkiaSharp" Version="1.68.0" />
-    <PackageReference Include="Stylet" Version="1.3.4" />
+    <PackageReference Include="MaterialDesignThemes" Version="$MaterialDesignThemesVersion$" />
+    <PackageReference Include="SkiaSharp" Version="$SkiaSharpVersion$" />
+    <PackageReference Include="Stylet" Version="$StyletVersion$" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,17 +23,16 @@
 
   <ItemGroup>
     <Reference Include="Artemis.Core">
-      <HintPath>..\..\..\..\Artemis\src\Artemis.Core\bin\AnyCPU\Debug\netcoreapp3.1\Artemis.Core.dll</HintPath>
+      <HintPath>$ArtemisDirectory$\Artemis.Core.dll</HintPath>
     </Reference>
     <Reference Include="Artemis.UI.Shared">
-      <HintPath>..\..\..\..\Artemis\src\Artemis.UI.Shared\bin\AnyCPU\Debug\netcoreapp3.1\Artemis.UI.Shared.dll</HintPath>
+      <HintPath>$ArtemisDirectory$\Artemis.UI.Shared.dll</HintPath>
     </Reference>
   </ItemGroup>
 
   <ItemGroup>
     <None Update="plugin.json">
-      <CopyToOutputDirectory></CopyToOutputDirectory>
-      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(BuildingInsideVisualStudio)' == 'true'">

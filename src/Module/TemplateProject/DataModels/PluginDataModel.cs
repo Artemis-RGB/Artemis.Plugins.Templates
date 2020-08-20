@@ -2,13 +2,13 @@
 using Artemis.Core.Plugins.Abstract.DataModels;
 using Artemis.Core.Plugins.Abstract.DataModels.Attributes;
 
-namespace ModuleProject.DataModels
+namespace $safeprojectname$.DataModels
 {
-    public class TemplateDataModel : DataModel
+    public class PluginDataModel : DataModel
     {
-        public TemplateDataModel()
+        public PluginDataModel()
         {
-            TemplateSubDataModel = new TemplateSubDataModel();
+            PluginSubDataModel = new PluginSubDataModel();
         }
 
         // Your datamodel can have regular properties and you can annotate them if you'd like
@@ -17,12 +17,12 @@ namespace ModuleProject.DataModels
 
         // You can even have classes in your datamodel, just don't forget to instantiate them ;)
         [DataModelProperty(Name = "A class within the datamodel")]
-        public TemplateSubDataModel TemplateSubDataModel { get; set; }
+        public PluginSubDataModel PluginSubDataModel { get; set; }
     }
 
-    public class TemplateSubDataModel
+    public class PluginSubDataModel
     {
-        public TemplateSubDataModel()
+        public PluginSubDataModel()
         {
             ListOfInts = new List<int> {1, 2, 3, 4, 5};
         }

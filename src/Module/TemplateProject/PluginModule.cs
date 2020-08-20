@@ -2,29 +2,22 @@
 using Artemis.Core.Models.Surface;
 using Artemis.Core.Plugins.Abstract;
 using Artemis.Core.Plugins.Modules;
-using ModuleProject.DataModels;
-using ModuleProject.ViewModels;
 using SkiaSharp;
+$if$ ($EnableDataModel$ == True)using $safeprojectname$.DataModels;$endif$
+$if$ ($IncludeCustomTab$ == True)using $safeprojectname$.ViewModels;$endif$
 
-namespace ModuleProject
+namespace $safeprojectname$
 {
     // The core of your module. Hover over the method names to see a description.
-    public class TemplateModule : ProfileModule<TemplateDataModel>
+    public class PluginModule : $BaseClass$
     {
         // This is the beginning of your plugin life cycle. Use this instead of a constructor.
         public override void EnablePlugin()
         {
-            // The modules display name that's shown in the menu
-            DisplayName = "Template";
-            // The modules display icon that's shown in the menu see https://materialdesignicons.com for available icons
-            DisplayIcon = "AccountHardHat";
-
-            // The default priority category in which the module will fall, the user may change this if they want
-            DefaultPriorityCategory = ModulePriorityCategory.Normal;
-
-            // This defines when the module should activate. Remove this if you want your module to always be active
-            ActivationRequirementMode = ActivationRequirementType.Any;
-            ActivationRequirements.Add(new ProcessActivationRequirement("Test"));
+            DisplayName = "$ModuleName$";
+            // See https://materialdesignicons.com for available icons
+            DisplayIcon = "$ModuleIcon$";
+            DefaultPriorityCategory = ModulePriorityCategory.$ModuleCategory$;
         }
 
         // This is the end of your plugin life cycle.
@@ -36,7 +29,11 @@ namespace ModuleProject
         public override IEnumerable<ModuleTab> GetModuleTabs()
         {
             // Optional - You may return a list of module tabs here, each view model will get its own tab in the UI. 
-            return new List<ModuleTab> {new ModuleTab<TemplateViewModel>("Template tab")};
+            $if$ ($IncludeCustomTab$ == True)
+            return new List<ModuleTab> {new ModuleTab<CustomViewModel>("Custom tab")};
+            $else$
+            return null;
+            $endif$
         }
 
         public override void ModuleActivated()

@@ -8,7 +8,7 @@ using LayerEffect.PropertyGroups;
 // namespace $safeprojectname$
 namespace LayerEffect
 {
-    // This is the layer effect
+    // This is the layer effect, the plugin has provided it to Artemis via a descriptor
     // Artemis may create multiple instances of it, one instance for each profile element (folder/layer) it is applied to
     public class PluginLayerEffect : LayerEffect<MainPropertyGroup>
     {

@@ -23,10 +23,10 @@
 
   <ItemGroup>
     <Reference Include="Artemis.Core">
-      <HintPath>$ArtemisDirectory$\Artemis.Core.dll</HintPath>
+      <HintPath>..\..\..\..\Artemis\src\Artemis.Core\bin\AnyCPU\Debug\netcoreapp3.1\Artemis.Core.dll</HintPath>
     </Reference>
     <Reference Include="Artemis.UI.Shared">
-      <HintPath>$ArtemisDirectory$\Artemis.UI.Shared.dll</HintPath>
+      <HintPath>..\..\..\..\Artemis\src\Artemis.UI.Shared\bin\AnyCPU\Debug\netcoreapp3.1\Artemis.UI.Shared.dll</HintPath>
     </Reference>
   </ItemGroup>
 

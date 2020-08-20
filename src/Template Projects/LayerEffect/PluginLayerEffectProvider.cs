@@ -4,7 +4,7 @@
 namespace LayerEffect
 {
     // This is your plugin, it provides Artemis wil one or more layer effects via descriptors.
-    // Your plugin gets enabled once. Your layer effects get enabled multiple times, once for each layer it is applied to.
+    // Your plugin gets enabled once. Your layer effects get enabled multiple times, once for each profile element (folder/layer) it is applied to.
     public class PluginLayerEffectProvider : LayerEffectProvider
     {
         public override void EnablePlugin()

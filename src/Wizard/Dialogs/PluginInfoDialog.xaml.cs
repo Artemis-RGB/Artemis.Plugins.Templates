@@ -1,11 +1,10 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.IO;
 using System.Windows;
 using Microsoft.VisualStudio.PlatformUI;
-using ModuleProjectWizard.Models;
+using PluginTemplatesWizard.Models;
 
-namespace ModuleProjectWizard.Dialogs
+namespace PluginTemplatesWizard.Dialogs
 {
     /// <summary>
     ///     Interaction logic for WizardDialog.xaml

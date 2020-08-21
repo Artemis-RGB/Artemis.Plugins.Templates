@@ -1,10 +1,8 @@
-﻿using Artemis.Core.Plugins.Abstract.ViewModels;
+﻿using Artemis.Core.Plugins.LayerEffects;
 using Artemis.UI.Shared.Services.Interfaces;
-using LayerEffect.PropertyGroups;
+using $safeprojectname$.PropertyGroups;
 
-
-// namespace $safeprojectname$.ViewModels
-namespace LayerEffect.ViewModels
+namespace $safeprojectname$.ViewModels
 {
     public class CustomViewModel : EffectConfigurationViewModel
     {
@@ -14,8 +12,9 @@ namespace LayerEffect.ViewModels
 
         public CustomViewModel(PluginLayerEffect layerEffect, IDialogService dialogService) : base(layerEffect)
         {
-            _dialogService = dialogService;
             Properties = layerEffect.Properties;
+
+            _dialogService = dialogService;
         }
 
         public MainPropertyGroup Properties { get; }

@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
-using Artemis.Core.Plugins.Abstract.DataModels;
-using Artemis.Core.Plugins.Abstract.DataModels.Attributes;
+using Artemis.Core.Plugins.DataModelExpansions.Attributes;
 
 namespace $safeprojectname$.DataModels
 {

@@ -1,6 +1,4 @@
 ﻿using System.Collections.Generic;
-using Artemis.Core.Models.Surface;
-using Artemis.Core.Plugins.Abstract;
 using Artemis.Core.Plugins.Modules;
 using SkiaSharp;
 $if$ ($EnableDataModel$ == True)using $safeprojectname$.DataModels;$endif$
@@ -15,25 +13,15 @@ namespace $safeprojectname$
         public override void EnablePlugin()
         {
             DisplayName = "$ModuleName$";
-            // See https://materialdesignicons.com for available icons
             DisplayIcon = "$ModuleIcon$";
             DefaultPriorityCategory = ModulePriorityCategory.$ModuleCategory$;
-        }
+            $if$ ($IncludeCustomTab$ == True)ModuleTabs = new List<ModuleTab> { new ModuleTab<CustomViewModel>("Custom tab") };$endif$
+    }
 
         // This is the end of your plugin life cycle.
         public override void DisablePlugin()
         {
             // Make sure to clean up resources where needed (dispose IDisposables etc.)
-        }
-
-        public override IEnumerable<ModuleTab> GetModuleTabs()
-        {
-            // Optional - You may return a list of module tabs here, each view model will get its own tab in the UI. 
-            $if$ ($IncludeCustomTab$ == True)
-            return new List<ModuleTab> {new ModuleTab<CustomViewModel>("Custom tab")};
-            $else$
-            return null;
-            $endif$
         }
 
         public override void ModuleActivated()

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ModuleProjectWizard.Models
+namespace PluginTemplatesWizard.Models
 {
     internal class PluginInfo
     {

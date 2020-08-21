@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:s="https://github.com/canton7/Stylet"
-             xmlns:viewModels="clr-namespace:TemplateProject.ViewModels"
+             xmlns:viewModels="clr-namespace:$safeprojectname$.ViewModels"
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800"
              d:DataContext="{d:DesignInstance viewModels:CustomViewModel}">
@@ -20,7 +20,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <TextBlock TextWrapping="Wrap" Grid.Row="0" Grid.ColumnSpan="2">
-            This is one of the views of your module. Each view gets its own tab in the UI. <LineBreak />
+            This is the configuration dialog of your layer effect <LineBreak />
             How you create your view is entirely up to you, you may use the Visual Studio designer or write XAML yourself. <LineBreak /><LineBreak />
             However, keep in mind that Artemis uses the Material Design In XAML library and their Demo App is full of great examples.
         </TextBlock>

@@ -1,12 +1,9 @@
-﻿using Artemis.Core.Plugins.Abstract.ViewModels;
-using Artemis.Core.Plugins.LayerEffect.Abstract;
+﻿using Artemis.Core.Plugins.LayerEffects;
 using SkiaSharp;
-using LayerEffect.PropertyGroups;
-// using $safeprojectname$.PropertyGroups;
-// $if$ ($IncludeConfigurationWindow$ == True)using $safeprojectname$.ViewModels;$endif$
+using $safeprojectname$.PropertyGroups;
+$if$ ($IncludeConfigurationWindow$ == True)using $safeprojectname$.ViewModels;$endif$
 
-// namespace $safeprojectname$
-namespace LayerEffect
+namespace $safeprojectname$
 {
     // This is the layer effect, the plugin has provided it to Artemis via a descriptor
     // Artemis may create multiple instances of it, one instance for each profile element (folder/layer) it is applied to
@@ -14,6 +11,7 @@ namespace LayerEffect
     {
         public override void EnableLayerEffect()
         {
+        $if$ ($IncludeConfigurationWindow$ == True)ConfigurationDialog = new LayerEffectConfigurationDialog<CustomViewModel>();$endif$
         }
 
         public override void DisableLayerEffect()
@@ -30,11 +28,6 @@ namespace LayerEffect
 
         public override void PostProcess(SKCanvas canvas, SKImageInfo canvasInfo, SKPath renderBounds, SKPaint paint)
         {
-        }
-
-        public override EffectConfigurationViewModel GetConfigurationViewModel()
-        {
-            return base.GetConfigurationViewModel();
         }
     }
 }

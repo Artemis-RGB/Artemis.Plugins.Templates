@@ -1,0 +1,90 @@
+﻿<ui:DialogWindow x:Class="PluginTemplatesWizard.PluginTypes.Module.ModuleInfoDialog"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:ui="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Shell.15.0"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 Title="Artemis Module Customization Wizard" Height="500" Width="700" ResizeMode="NoResize"
+                 Loaded="Window_Loaded" TextOptions.TextFormattingMode="Display">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75*" />
+            <RowDefinition Height="364*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="60*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Name="headingGrid" Background="White">
+            <Label Grid.Row="0"
+                   Content="Enter module information"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Center"
+                   Margin="18,0,0,0"
+                   FontWeight="ExtraBold" />
+        </Grid>
+        <Grid Grid.Row="1" Name="mainGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="400*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,15,15,0" TextWrapping="Wrap">
+                Enter some information about your module below. This affects the code that is generated in your project, but you can always manually change things later.
+            </TextBlock>
+
+            <Label Grid.Row="1" Grid.Column="1" Margin="0,15,0,0" Content="_Display name*:" FontWeight="Bold" Target="{Binding ElementName=NameTextBox}" />
+            <TextBox Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" Margin="0,15,0,0" Height="23" Name="NameTextBox" Width="410" Text="" />
+            <Label Grid.Row="2" Grid.Column="1" Margin="0,15,0,0" Content="_Sidebar icon*:" FontWeight="Bold" Target="{Binding ElementName=DescriptionTextBox}" />
+            <StackPanel Grid.Row="2" Grid.Column="2" Margin="0,15,0,0">
+                <TextBox HorizontalAlignment="Left" Height="23" Name="IconTextBox" Width="410" Text="" />
+                <TextBlock Margin="0 5 0 0">
+                    Use CamelCasing, for available icons see
+                    <Hyperlink NavigateUri="https://materialdesignicons.com/" Click="Hyperlink_OnClick">
+                        https://materialdesignicons.com/
+                    </Hyperlink>
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Vertical">
+                <Label Margin="0,10,0,0"
+                       Content="Priority category:"
+                       FontWeight="Bold"
+                       ToolTip="The priority category for your module defines which category gets to render on top of which" />
+                <RadioButton Content="_Normal" Margin="5,0,0,0" Name="CategoryNormal" FontWeight="Normal" IsChecked="True" />
+                <RadioButton Content="_Application/game" Margin="5,5,0,0" Name="CategoryApplication" FontWeight="Normal" />
+                <RadioButton Content="_Overlay" Margin="5,5,0,0" Name="CategoryOverlay" FontWeight="Normal" />
+            </StackPanel>
+
+            <CheckBox Grid.Row="4"
+                      Grid.Column="1"
+                      Name="EnableProfilesCheckBox"
+                      Margin="4,20,0,0"
+                      Content="Enable profiles"
+                      ToolTip="If checked, a profiles tab is included in the UI and users can create profiles tied to your module" />
+            <CheckBox Grid.Row="5"
+                      Grid.Column="1" 
+                      Name="EnableDataModelCheckBox"
+                      Margin="4,5,0,0" 
+                      Content="Include custom data model" 
+                      ToolTip="If checked, a custom data model is included in the project" />
+            <CheckBox Grid.Row="6"
+                      Grid.Column="1" 
+                      Name="AddCustomTabCheckBox"
+                      Margin="4,5,0,0" 
+                      Content="Include custom UI tab"
+                      ToolTip="If checked, a view and view model for a custom UI tab is included in the project" />
+        </Grid>
+        <Rectangle Grid.Row="2" Name="SeparatorRectangle" Fill="White" />
+        <StackPanel Grid.Row="3" Name="NavigationPanel" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10 0">
+            <Button Content="_Previous" Margin="5 0" Height="25" Name="PreviousButton" Width="85" Click="PreviousButton_Click" />
+            <Button Content="_Finish" Margin="5 0" Height="25" Name="FinishButton" Width="85" Click="FinishButton_Click" IsDefault="True" />
+        </StackPanel>
+    </Grid>
+</ui:DialogWindow>

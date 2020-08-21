@@ -1,4 +1,4 @@
-﻿namespace ModuleProjectWizard.Models
+﻿namespace PluginTemplatesWizard.PluginTypes.Module
 {
     internal class ModuleInfo
     {

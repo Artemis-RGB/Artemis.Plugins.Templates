@@ -5,38 +5,22 @@ using System.IO;
 using System.Linq;
 using EnvDTE;
 using Microsoft.VisualStudio.TemplateWizard;
-using ModuleProjectWizard.Dialogs;
-using ModuleProjectWizard.Models;
+using PluginTemplatesWizard.Dialogs;
+using PluginTemplatesWizard.Models;
+using PluginTemplatesWizard.PluginTypes;
+using PluginTemplatesWizard.PluginTypes.LayerEffect;
+using PluginTemplatesWizard.PluginTypes.Module;
 
-namespace ModuleProjectWizard
+namespace PluginTemplatesWizard
 {
     public class WizardImplementation : IWizard
     {
-        private readonly ModuleInfo _moduleInfo = new ModuleInfo();
         private readonly PluginInfo _pluginInfo = new PluginInfo {Guid = Guid.NewGuid()};
-        private ModuleInfoDialog _moduleInfoDialog;
-        private PluginInfoDialog _pluginInfoDialog;
+        private IPluginType _pluginType;
 
         public void RunStarted(object automationObject, Dictionary<string, string> replacementsDictionary, WizardRunKind runKind, object[] customParams)
         {
-            _pluginInfo.Name = replacementsDictionary["$specifiedsolutionname$"];
-            _pluginInfo.Description = "This is my awesome plugin";
-            _pluginInfo.Icon = "ToyBrickPlus";
-
-            _pluginInfoDialog = new PluginInfoDialog(_pluginInfo);
-            var pluginInfoDialogCompleted = _pluginInfoDialog.ShowModal();
-            if (pluginInfoDialogCompleted == false)
-                throw new WizardCancelledException();
-
-            _moduleInfo.Name = _pluginInfo.Name;
-            _moduleInfo.Icon = _pluginInfo.Icon;
-
-            _moduleInfoDialog = new ModuleInfoDialog(_moduleInfo);
-            var moduleInfoDialogCompleted = _moduleInfoDialog.ShowModal();
-            if (moduleInfoDialogCompleted == false)
-                RunStarted(automationObject, replacementsDictionary, runKind, customParams);
-
-            ApplyInfo(replacementsDictionary);
+            GatherPluginInfo(replacementsDictionary, customParams);
         }
 
         public void ProjectFinishedGenerating(Project project)
@@ -49,11 +33,7 @@ namespace ModuleProjectWizard
 
         public bool ShouldAddProjectItem(string filePath)
         {
-            if (filePath == "DataModels")
-                return _moduleInfo.EnableDataModel;
-            if (filePath == "ViewModels" || filePath == "Views")
-                return _moduleInfo.IncludeCustomTab;
-            return true;
+            return _pluginType.ShouldAddProjectItem(filePath);
         }
 
         public void BeforeOpeningFile(ProjectItem projectItem)
@@ -64,37 +44,43 @@ namespace ModuleProjectWizard
         {
         }
 
-        private void ApplyInfo(Dictionary<string, string> replacementsDictionary)
+        public void GatherPluginInfo(Dictionary<string, string> replacementsDictionary, object[] customParams)
         {
+            _pluginInfo.Name = replacementsDictionary["$specifiedsolutionname$"];
+            _pluginInfo.Description = "This is my awesome plugin";
+            _pluginInfo.Icon = "ToyBrickPlus";
+
+            var pluginInfoDialog = new PluginInfoDialog(_pluginInfo);
+            var pluginInfoDialogCompleted = pluginInfoDialog.ShowModal();
+            if (pluginInfoDialogCompleted == false)
+                throw new WizardCancelledException();
+
             // Paths
-            replacementsDictionary.Add("$ArtemisDirectory$", _pluginInfo.ArtemisDirectory);
-            replacementsDictionary.Add("$ArtemisDirectoryEscaped$", _pluginInfo.ArtemisDirectory.Replace("\\", "\\\\"));
+            replacementsDictionary["$ArtemisDirectory$"] = _pluginInfo.ArtemisDirectory;
+            replacementsDictionary["$ArtemisDirectoryEscaped$"] = _pluginInfo.ArtemisDirectory.Replace("\\", "\\\\");
 
             // Nuget package versions
-            replacementsDictionary.Add("$MaterialDesignThemesVersion$", GetNugetFileVersion("MaterialDesignThemes.Wpf.dll"));
-            replacementsDictionary.Add("$SkiaSharpVersion$", GetNugetFileVersion("SkiaSharp.dll"));
-            replacementsDictionary.Add("$StyletVersion$", GetNugetFileVersion("Stylet.dll"));
+            replacementsDictionary["$MaterialDesignThemesVersion$"] = GetNugetFileVersion("MaterialDesignThemes.Wpf.dll");
+            replacementsDictionary["$SkiaSharpVersion$"] = GetNugetFileVersion("SkiaSharp.dll");
+            replacementsDictionary["$StyletVersion$"] = GetNugetFileVersion("Stylet.dll");
 
             // Plugin info
-            replacementsDictionary.Add("$PluginGuid$", _pluginInfo.Guid.ToString());
-            replacementsDictionary.Add("$PluginName$", _pluginInfo.Name);
-            replacementsDictionary.Add("$PluginDescription$", _pluginInfo.Description);
+            replacementsDictionary["$PluginGuid$"] = _pluginInfo.Guid.ToString();
+            replacementsDictionary["$PluginName$"] = _pluginInfo.Name;
+            replacementsDictionary["$PluginDescription$"] = _pluginInfo.Description;
             if (_pluginInfo.Icon != null)
-                replacementsDictionary.Add("$PluginIcon$", _pluginInfo.Icon);
+                replacementsDictionary["$PluginIcon$"] = _pluginInfo.Icon;
 
-            // Module info
-            if (_moduleInfo.EnableProfiles)
-                replacementsDictionary.Add("$BaseClass$", _moduleInfo.EnableDataModel ? "ProfileModule<PluginDataModel>" : "ProfileModule");
+
+            // customParams contains the path to the template
+            if (customParams.Any(p => p.ToString().Contains("Module")))
+                _pluginType = new ModulePluginType(this, replacementsDictionary, customParams, _pluginInfo);
+            else if (customParams.Any(p => p.ToString().Contains("Layer Effect")))
+                _pluginType = new LayerEffectType(this, replacementsDictionary, customParams, _pluginInfo);
             else
-                replacementsDictionary.Add("$BaseClass$", _moduleInfo.EnableDataModel ? "Module<PluginDataModel>" : "Module");
+                throw new Exception("Couldn't detect a plugin type based on the template that was selected.");
 
-            replacementsDictionary.Add("$ModuleName$", _moduleInfo.Name);
-            replacementsDictionary.Add("$ModuleIcon$", _moduleInfo.Icon);
-            replacementsDictionary.Add("$ModuleCategory$", _moduleInfo.PriorityCategory);
-
-            replacementsDictionary.Add("$EnableProfiles$", _moduleInfo.EnableProfiles.ToString());
-            replacementsDictionary.Add("$EnableDataModel$", _moduleInfo.EnableDataModel.ToString());
-            replacementsDictionary.Add("$IncludeCustomTab$", _moduleInfo.IncludeCustomTab.ToString());
+            _pluginType.GatherInfo();
         }
 
         private string GetNugetFileVersion(string file)

@@ -3,5 +3,5 @@
   "Name": "$PluginName$",
   "Description": "$PluginDescription$",
   "Version": "1.0.0.0",
-  "Main": "LayerEffect.dll"
+  "Main": "$safeprojectname$.dll"
 }

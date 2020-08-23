@@ -8,6 +8,9 @@ using Microsoft.VisualStudio.TemplateWizard;
 using PluginTemplatesWizard.Dialogs;
 using PluginTemplatesWizard.Models;
 using PluginTemplatesWizard.PluginTypes;
+using PluginTemplatesWizard.PluginTypes.DataModelExpansion;
+using PluginTemplatesWizard.PluginTypes.Device;
+using PluginTemplatesWizard.PluginTypes.LayerBrush;
 using PluginTemplatesWizard.PluginTypes.LayerEffect;
 using PluginTemplatesWizard.PluginTypes.Module;
 
@@ -75,8 +78,14 @@ namespace PluginTemplatesWizard
             // customParams contains the path to the template
             if (customParams.Any(p => p.ToString().Contains("Module")))
                 _pluginType = new ModulePluginType(this, replacementsDictionary, customParams, _pluginInfo);
+            else if (customParams.Any(p => p.ToString().Contains("Layer Brush")))
+                _pluginType = new LayerBrushType(this, replacementsDictionary, customParams, _pluginInfo);
             else if (customParams.Any(p => p.ToString().Contains("Layer Effect")))
                 _pluginType = new LayerEffectType(this, replacementsDictionary, customParams, _pluginInfo);
+            else if (customParams.Any(p => p.ToString().Contains("Data Model Expansion")))
+                _pluginType = new DataModelExpansionType();
+            else if (customParams.Any(p => p.ToString().Contains("Device")))
+                _pluginType = new DeviceType();
             else
                 throw new Exception("Couldn't detect a plugin type based on the template that was selected.");
 

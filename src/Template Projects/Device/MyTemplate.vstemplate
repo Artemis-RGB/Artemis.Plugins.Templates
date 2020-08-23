@@ -1,0 +1,31 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="ProjectGroup">
+  <TemplateData>
+    <Name>Artemis plugin - Device Provider</Name>
+    <Description>A device provider allows you to implement and add an RGB.NET device provider to Artemis</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>DeviceProvider</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+        <ProjectTemplateLink>
+            DeviceProvider\MyTemplate.vstemplate
+        </ProjectTemplateLink>
+        <ProjectTemplateLink>
+            RgbNetDeviceProvider\MyTemplate.vstemplate
+        </ProjectTemplateLink>
+    </ProjectCollection>
+</TemplateContent>
+  <WizardExtension>
+    <Assembly>PluginTemplatesWizard, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=8a9dce45def4ee9e</Assembly>
+    <FullClassName>PluginTemplatesWizard.WizardImplementation</FullClassName>
+  </WizardExtension>
+</VSTemplate>

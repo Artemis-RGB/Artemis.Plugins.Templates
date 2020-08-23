@@ -5,12 +5,6 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginTemplatesWizard", "Wizard\PluginTemplatesWizard.csproj", "{A468C66D-D29F-48A4-A11D-EE7F30F834DA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Template Projects", "Template Projects", "{7263FC51-D428-4AD9-825D-954F4E18322C}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module", "Template Projects\Module\Module.csproj", "{40E4D71A-1C2A-4451-AB7A-F287A3257D21}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LayerEffect", "Template Projects\LayerEffect\LayerEffect.csproj", "{14E6273D-9D7A-415F-A13A-4A82FB315F8B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,21 +15,9 @@ Global
 		{A468C66D-D29F-48A4-A11D-EE7F30F834DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A468C66D-D29F-48A4-A11D-EE7F30F834DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A468C66D-D29F-48A4-A11D-EE7F30F834DA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{40E4D71A-1C2A-4451-AB7A-F287A3257D21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{40E4D71A-1C2A-4451-AB7A-F287A3257D21}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{40E4D71A-1C2A-4451-AB7A-F287A3257D21}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{40E4D71A-1C2A-4451-AB7A-F287A3257D21}.Release|Any CPU.Build.0 = Release|Any CPU
-		{14E6273D-9D7A-415F-A13A-4A82FB315F8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{14E6273D-9D7A-415F-A13A-4A82FB315F8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{14E6273D-9D7A-415F-A13A-4A82FB315F8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{14E6273D-9D7A-415F-A13A-4A82FB315F8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{40E4D71A-1C2A-4451-AB7A-F287A3257D21} = {7263FC51-D428-4AD9-825D-954F4E18322C}
-		{14E6273D-9D7A-415F-A13A-4A82FB315F8B} = {7263FC51-D428-4AD9-825D-954F4E18322C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {689EF689-0152-4F10-BD6B-45B36715E933}

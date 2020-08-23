@@ -42,7 +42,7 @@ namespace PluginTemplatesWizard.PluginTypes.LayerEffect
 
         public bool ShouldAddProjectItem(string filePath)
         {
-            if (filePath == "ViewModels" || filePath == "Views")
+            if (filePath == "DesignTimeResources.xaml" || filePath == "ViewModels" || filePath == "Views")
                 return _layerEffectInfo.IncludeCustomDialog;
 
             return true;

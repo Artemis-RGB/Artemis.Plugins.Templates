@@ -31,6 +31,15 @@ $else$<Project Sdk="Microsoft.NET.Sdk">$endif$
     <Reference Include="Artemis.UI.Shared">
       <HintPath>$ArtemisDirectory$\Artemis.UI.Shared.dll</HintPath>
     </Reference>
+	<!-- TODO: Replace with PackageReferences when moving to Nuget -->
+	$if$ ($LayerBrushRenderType$ == RgbNet)
+	<Reference Include="RGB.NET.Core">
+      <HintPath>$ArtemisDirectory$\RGB.NET.Core.dll</HintPath>
+    </Reference>   
+	<Reference Include="RGB.NET.Brushes">
+      <HintPath>$ArtemisDirectory$\RGB.NET.Brushes.dll</HintPath>
+    </Reference>
+	$endif$
   </ItemGroup>
 
   <ItemGroup>

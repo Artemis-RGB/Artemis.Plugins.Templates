@@ -1,28 +1,18 @@
-﻿$if$ ($IncludeConfigurationWindow$ == True)<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
-$else$<Project Sdk="Microsoft.NET.Sdk">$endif$
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    $if$ ($IncludeConfigurationWindow$ == True)<UseWPF>true</UseWPF>$endif$
     <AssemblyName>$safeprojectname$</AssemblyName>
     <RootNamespace>$safeprojectname$</RootNamespace>
-
   </PropertyGroup>
 
-  <ItemGroup>
-    $if$ ($IncludeConfigurationWindow$ == True)<PackageReference Include="MaterialDesignThemes" Version="$MaterialDesignThemesVersion$" />$endif$
+  <ItemGroup>    
     <PackageReference Include="SkiaSharp" Version="$SkiaSharpVersion$" />
-    <PackageReference Include="Stylet" Version="$StyletVersion$" />
+    <PackageReference Include="Stylet" Version="$SkiaSharpVersion$" />
   </ItemGroup>
 
-  $if$ ($IncludeConfigurationWindow$ == True)
   <ItemGroup>
-    <Page Include="Properties\DesignTimeResources.xaml" Condition="'$(DesignTime)'=='true' OR ('$(SolutionPath)'!='' AND Exists('$(SolutionPath)') AND '$(BuildingInsideVisualStudio)'!='true' AND '$(BuildingInsideExpressionBlend)'!='true')">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
-    </Page>
+    <ProjectReference Include="..\RgbNetDeviceProvider\RgbNetDeviceProvider.csproj" />
   </ItemGroup>
-  $endif$
 
   <ItemGroup>
     <Reference Include="Artemis.Core">
@@ -30,6 +20,9 @@ $else$<Project Sdk="Microsoft.NET.Sdk">$endif$
     </Reference>
     <Reference Include="Artemis.UI.Shared">
       <HintPath>$ArtemisDirectory$\Artemis.UI.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="RGB.NET.Core">
+      <HintPath>$ArtemisDirectory$\RGB.NET.Core.dll</HintPath>
     </Reference>
   </ItemGroup>
 

@@ -17,7 +17,7 @@ namespace $safeprojectname$
             DisplayIcon = "$ModuleIcon$";
             DefaultPriorityCategory = ModulePriorityCategory.$ModuleCategory$;
             $if$ ($IncludeCustomTab$ == True)ModuleTabs = new List<ModuleTab> { new ModuleTab<CustomViewModel>("Custom tab") };$endif$
-    }
+        }
 
         // This is the end of your plugin life cycle.
         public override void DisablePlugin()
@@ -35,6 +35,7 @@ namespace $safeprojectname$
             // When this gets called your activation requirements are no longer met and your module will stop displaying
         }
 
+        $if$ ($EnableProfiles$ != True)
         public override void Update(double deltaTime)
         {
         }
@@ -42,5 +43,6 @@ namespace $safeprojectname$
         public override void Render(double deltaTime, ArtemisSurface surface, SKCanvas canvas, SKImageInfo canvasInfo)
         {
         }
+        $endif$
     }
 }

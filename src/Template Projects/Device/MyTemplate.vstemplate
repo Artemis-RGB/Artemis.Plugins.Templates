@@ -16,11 +16,11 @@
   </TemplateData>
   <TemplateContent>
     <ProjectCollection>
-        <ProjectTemplateLink>
-            DeviceProvider\MyTemplate.vstemplate
+        <ProjectTemplateLink CopyParameters="true" ProjectName="$safeprojectname$">
+            DeviceProvider\DeviceProvider.vstemplate
         </ProjectTemplateLink>
-        <ProjectTemplateLink>
-            RgbNetDeviceProvider\MyTemplate.vstemplate
+        <ProjectTemplateLink CopyParameters="true">
+            RgbNetDeviceProvider\RgbNetDeviceProvider.vstemplate
         </ProjectTemplateLink>
     </ProjectCollection>
 </TemplateContent>

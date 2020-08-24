@@ -9,7 +9,7 @@ namespace $safeprojectname$
         public override void EnablePlugin()
         {
             // This is where we can register our effect for use, we can also register multiple effects if we'd like
-            AddLayerEffectDescriptor<PluginLayerEffect>("$LayerEffectName$", "$LayerEffectDescription$", "$LayerEffectIcon$");
+            RegisterLayerEffectDescriptor<PluginLayerEffect>("$LayerEffectName$", "$LayerEffectDescription$", "$LayerEffectIcon$");
         }
 
         public override void DisablePlugin()

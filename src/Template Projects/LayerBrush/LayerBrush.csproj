@@ -5,7 +5,10 @@ $else$<Project Sdk="Microsoft.NET.Sdk">$endif$
     $if$ ($IncludeConfigurationWindow$ == True)<UseWPF>true</UseWPF>$endif$
     <AssemblyName>$safeprojectname$</AssemblyName>
     <RootNamespace>$safeprojectname$</RootNamespace>
-
+	<Platforms>x64</Platforms>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
 
   <ItemGroup>

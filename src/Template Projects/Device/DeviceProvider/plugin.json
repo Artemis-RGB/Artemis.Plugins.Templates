@@ -1,7 +1,7 @@
 {
-  "Guid": "$PluginGuid$",
-  "Name": "$PluginName$",
-  "Description": "$PluginDescription$",
+  "Guid": "$ext_PluginGuid$",
+  "Name": "$ext_PluginName$",
+  "Description": "$ext_PluginDescription$",
   "Version": "1.0.0.0",
   "Main": "$safeprojectname$.dll"
 }

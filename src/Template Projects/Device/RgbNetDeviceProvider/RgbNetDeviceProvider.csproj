@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <Reference Include="RGB.NET.Core">
-      <HintPath>$ArtemisDirectory$\RGB.NET.Core.dll</HintPath>
+      <HintPath>$ext_ArtemisDirectory$\RGB.NET.Core.dll</HintPath>
     </Reference>
   </ItemGroup>
 

@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using Artemis.Core.Models.Surface;
 using Artemis.Core.Plugins.Modules;
 using SkiaSharp;
 $if$ ($EnableDataModel$ == True)using $safeprojectname$.DataModels;$endif$
+$if$ ($IncludeCustomTab$ == True)using System.Collections.Generic;$endif$
 $if$ ($IncludeCustomTab$ == True)using $safeprojectname$.ViewModels;$endif$
 
 namespace $safeprojectname$

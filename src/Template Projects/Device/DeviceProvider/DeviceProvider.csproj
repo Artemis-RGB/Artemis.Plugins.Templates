@@ -3,11 +3,15 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <AssemblyName>$safeprojectname$</AssemblyName>
     <RootNamespace>$safeprojectname$</RootNamespace>
+	<Platforms>x64</Platforms>
   </PropertyGroup>
-
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  
   <ItemGroup>    
-    <PackageReference Include="SkiaSharp" Version="$SkiaSharpVersion$" />
-    <PackageReference Include="Stylet" Version="$SkiaSharpVersion$" />
+    <PackageReference Include="SkiaSharp" Version="$ext_SkiaSharpVersion$" />
+    <PackageReference Include="Stylet" Version="$ext_StyletVersion$" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,13 +20,13 @@
 
   <ItemGroup>
     <Reference Include="Artemis.Core">
-      <HintPath>$ArtemisDirectory$\Artemis.Core.dll</HintPath>
+      <HintPath>$ext_ArtemisDirectory$\Artemis.Core.dll</HintPath>
     </Reference>
     <Reference Include="Artemis.UI.Shared">
-      <HintPath>$ArtemisDirectory$\Artemis.UI.Shared.dll</HintPath>
+      <HintPath>$ext_ArtemisDirectory$\Artemis.UI.Shared.dll</HintPath>
     </Reference>
     <Reference Include="RGB.NET.Core">
-      <HintPath>$ArtemisDirectory$\RGB.NET.Core.dll</HintPath>
+      <HintPath>$ext_ArtemisDirectory$\RGB.NET.Core.dll</HintPath>
     </Reference>
   </ItemGroup>
 

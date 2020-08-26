@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <ShouldIncludeNativeSkiaSharp>false</ShouldIncludeNativeSkiaSharp>
     <AssemblyName>$safeprojectname$</AssemblyName>
     <RootNamespace>$safeprojectname$</RootNamespace>
 	<Platforms>x64</Platforms>

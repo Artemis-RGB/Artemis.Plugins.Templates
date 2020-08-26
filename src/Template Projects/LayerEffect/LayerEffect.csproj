@@ -2,6 +2,7 @@
 $else$<Project Sdk="Microsoft.NET.Sdk">$endif$
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <ShouldIncludeNativeSkiaSharp>false</ShouldIncludeNativeSkiaSharp>
     $if$ ($IncludeConfigurationWindow$ == True)<UseWPF>true</UseWPF>$endif$
     <AssemblyName>$safeprojectname$</AssemblyName>
     <RootNamespace>$safeprojectname$</RootNamespace>

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PluginTemplatesWizard.Models
+namespace ArtemisPluginTemplates.Models
 {
     internal class PluginInfo
     {

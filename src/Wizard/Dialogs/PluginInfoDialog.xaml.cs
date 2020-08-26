@@ -1,10 +1,10 @@
 ﻿using System.Diagnostics;
 using System.IO;
 using System.Windows;
+using ArtemisPluginTemplates.Models;
 using Microsoft.VisualStudio.PlatformUI;
-using PluginTemplatesWizard.Models;
 
-namespace PluginTemplatesWizard.Dialogs
+namespace ArtemisPluginTemplates.Dialogs
 {
     /// <summary>
     ///     Interaction logic for WizardDialog.xaml

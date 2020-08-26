@@ -1,4 +1,4 @@
-﻿namespace PluginTemplatesWizard.PluginTypes
+﻿namespace ArtemisPluginTemplates.PluginTypes
 {
     internal interface IPluginType
     {

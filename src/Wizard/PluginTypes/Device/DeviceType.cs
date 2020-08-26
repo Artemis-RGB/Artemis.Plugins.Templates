@@ -1,4 +1,4 @@
-﻿namespace PluginTemplatesWizard.PluginTypes.Device
+﻿namespace ArtemisPluginTemplates.PluginTypes.Device
 {
     internal class DeviceType : IPluginType
     {

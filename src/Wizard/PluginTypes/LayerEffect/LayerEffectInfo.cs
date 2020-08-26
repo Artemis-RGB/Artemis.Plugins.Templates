@@ -1,4 +1,4 @@
-﻿namespace PluginTemplatesWizard.PluginTypes.LayerEffect
+﻿namespace ArtemisPluginTemplates.PluginTypes.LayerEffect
 {
     public class LayerEffectInfo
     {

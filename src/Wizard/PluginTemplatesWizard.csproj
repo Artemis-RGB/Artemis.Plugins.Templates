@@ -20,7 +20,7 @@
     <ProjectGuid>{A468C66D-D29F-48A4-A11D-EE7F30F834DA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PluginTemplatesWizard</RootNamespace>
+    <RootNamespace>ArtemisPluginTemplates</RootNamespace>
     <AssemblyName>ArtemisPluginTemplates</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <GeneratePkgDefFile>true</GeneratePkgDefFile>

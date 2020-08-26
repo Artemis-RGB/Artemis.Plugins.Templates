@@ -2,7 +2,7 @@ using System.Diagnostics;
 using System.Windows;
 using Microsoft.VisualStudio.PlatformUI;
 
-namespace PluginTemplatesWizard.PluginTypes.LayerEffect
+namespace ArtemisPluginTemplates.PluginTypes.LayerEffect
 {
     /// <summary>
     ///     Interaction logic for LayerEffectInfoDialog.xaml

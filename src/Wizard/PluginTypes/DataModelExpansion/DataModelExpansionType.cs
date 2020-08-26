@@ -1,4 +1,4 @@
-﻿namespace PluginTemplatesWizard.PluginTypes.DataModelExpansion
+﻿namespace ArtemisPluginTemplates.PluginTypes.DataModelExpansion
 {
     internal class DataModelExpansionType : IPluginType
     {

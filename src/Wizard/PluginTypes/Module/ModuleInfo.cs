@@ -1,4 +1,4 @@
-﻿namespace PluginTemplatesWizard.PluginTypes.Module
+﻿namespace ArtemisPluginTemplates.PluginTypes.Module
 {
     internal class ModuleInfo
     {

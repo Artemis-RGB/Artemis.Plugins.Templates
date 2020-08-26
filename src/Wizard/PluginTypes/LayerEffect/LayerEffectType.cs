@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using PluginTemplatesWizard.Models;
+using ArtemisPluginTemplates.Models;
 
-namespace PluginTemplatesWizard.PluginTypes.LayerEffect
+namespace ArtemisPluginTemplates.PluginTypes.LayerEffect
 {
     internal class LayerEffectType : IPluginType
     {

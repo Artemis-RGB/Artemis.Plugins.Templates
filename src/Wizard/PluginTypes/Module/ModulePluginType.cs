@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using PluginTemplatesWizard.Models;
+using ArtemisPluginTemplates.Models;
 
-namespace PluginTemplatesWizard.PluginTypes.Module
+namespace ArtemisPluginTemplates.PluginTypes.Module
 {
     internal class ModulePluginType : IPluginType
     {

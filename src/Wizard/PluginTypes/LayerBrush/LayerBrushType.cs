@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using PluginTemplatesWizard.Models;
+using ArtemisPluginTemplates.Models;
 
-namespace PluginTemplatesWizard.PluginTypes.LayerBrush
+namespace ArtemisPluginTemplates.PluginTypes.LayerBrush
 {
     internal class LayerBrushType : IPluginType
     {

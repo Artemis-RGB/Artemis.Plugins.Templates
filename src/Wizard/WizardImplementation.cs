@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using ArtemisPluginTemplates.Dialogs;
+using ArtemisPluginTemplates.Models;
+using ArtemisPluginTemplates.PluginTypes;
+using ArtemisPluginTemplates.PluginTypes.DataModelExpansion;
+using ArtemisPluginTemplates.PluginTypes.Device;
+using ArtemisPluginTemplates.PluginTypes.LayerBrush;
+using ArtemisPluginTemplates.PluginTypes.LayerEffect;
+using ArtemisPluginTemplates.PluginTypes.Module;
 using EnvDTE;
 using Microsoft.VisualStudio.TemplateWizard;
-using PluginTemplatesWizard.Dialogs;
-using PluginTemplatesWizard.Models;
-using PluginTemplatesWizard.PluginTypes;
-using PluginTemplatesWizard.PluginTypes.DataModelExpansion;
-using PluginTemplatesWizard.PluginTypes.Device;
-using PluginTemplatesWizard.PluginTypes.LayerBrush;
-using PluginTemplatesWizard.PluginTypes.LayerEffect;
-using PluginTemplatesWizard.PluginTypes.Module;
 
-namespace PluginTemplatesWizard
+namespace ArtemisPluginTemplates
 {
     public class WizardImplementation : IWizard
     {

@@ -2,7 +2,7 @@ using System.Diagnostics;
 using System.Windows;
 using Microsoft.VisualStudio.PlatformUI;
 
-namespace PluginTemplatesWizard.PluginTypes.LayerBrush
+namespace ArtemisPluginTemplates.PluginTypes.LayerBrush
 {
     /// <summary>
     ///     Interaction logic for LayerBrushInfoDialog.xaml

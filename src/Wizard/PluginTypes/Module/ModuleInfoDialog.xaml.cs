@@ -2,7 +2,7 @@ using System.Diagnostics;
 using System.Windows;
 using Microsoft.VisualStudio.PlatformUI;
 
-namespace PluginTemplatesWizard.PluginTypes.Module
+namespace ArtemisPluginTemplates.PluginTypes.Module
 {
     /// <summary>
     ///     Interaction logic for WizardDialog.xaml

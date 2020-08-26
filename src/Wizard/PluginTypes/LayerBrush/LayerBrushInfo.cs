@@ -1,4 +1,4 @@
-﻿namespace PluginTemplatesWizard.PluginTypes.LayerBrush
+﻿namespace ArtemisPluginTemplates.PluginTypes.LayerBrush
 {
     public class LayerBrushInfo
     {

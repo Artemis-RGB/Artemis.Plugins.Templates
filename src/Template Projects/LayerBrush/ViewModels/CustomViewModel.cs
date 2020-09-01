@@ -1,5 +1,5 @@
-﻿using Artemis.Core.Plugins.LayerBrushes;
-using Artemis.UI.Shared.Services.Interfaces;
+﻿using Artemis.Core.LayerBrushes;
+using Artemis.UI.Shared.Services;
 using $safeprojectname$.PropertyGroups;
 
 namespace $safeprojectname$.ViewModels

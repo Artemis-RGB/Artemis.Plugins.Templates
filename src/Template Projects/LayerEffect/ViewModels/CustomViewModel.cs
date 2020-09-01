@@ -1,5 +1,5 @@
-﻿using Artemis.Core.Plugins.LayerEffects;
-using Artemis.UI.Shared.Services.Interfaces;
+﻿using Artemis.Core.LayerEffects;
+using Artemis.UI.Shared.Services;
 using $safeprojectname$.PropertyGroups;
 
 namespace $safeprojectname$.ViewModels

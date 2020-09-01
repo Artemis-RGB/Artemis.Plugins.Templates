@@ -1,5 +1,5 @@
-﻿using Artemis.Core.Models.Surface;
-using Artemis.Core.Plugins.Modules;
+﻿using Artemis.Core;
+using Artemis.Core.Modules;
 using SkiaSharp;
 $if$ ($EnableDataModel$ == True)using $safeprojectname$.DataModels;$endif$
 $if$ ($IncludeCustomTab$ == True)using System.Collections.Generic;$endif$
@@ -25,12 +25,12 @@ namespace $safeprojectname$
             // Make sure to clean up resources where needed (dispose IDisposables etc.)
         }
 
-        public override void ModuleActivated()
+        public override void ModuleActivated(bool isOverride)
         {
             // When this gets called your activation requirements have been met and the module will start displaying
         }
 
-        public override void ModuleDeactivated()
+        public override void ModuleDeactivated(bool isOverride)
         {
             // When this gets called your activation requirements are no longer met and your module will stop displaying
         }

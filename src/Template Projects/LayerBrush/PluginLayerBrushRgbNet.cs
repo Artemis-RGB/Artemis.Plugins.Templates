@@ -1,4 +1,4 @@
-﻿using Artemis.Core.Plugins.LayerBrushes;
+﻿using Artemis.Core.LayerBrushes;
 using RGB.NET.Brushes;
 using RGB.NET.Core;
 using $safeprojectname$.PropertyGroups;

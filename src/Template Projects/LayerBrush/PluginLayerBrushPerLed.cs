@@ -1,5 +1,5 @@
-﻿using Artemis.Core.Models.Surface;
-using Artemis.Core.Plugins.LayerBrushes;
+﻿using Artemis.Core;
+using Artemis.Core.LayerBrushes;
 using SkiaSharp;
 using $safeprojectname$.PropertyGroups;
 $if$ ($IncludeConfigurationWindow$ == True)using $safeprojectname$.ViewModels;$endif$

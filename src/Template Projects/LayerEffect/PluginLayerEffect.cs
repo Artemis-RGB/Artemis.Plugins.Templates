@@ -1,4 +1,4 @@
-﻿using Artemis.Core.Plugins.LayerEffects;
+﻿using Artemis.LayerEffects;
 using SkiaSharp;
 using $safeprojectname$.PropertyGroups;
 $if$ ($IncludeConfigurationWindow$ == True)using $safeprojectname$.ViewModels;$endif$

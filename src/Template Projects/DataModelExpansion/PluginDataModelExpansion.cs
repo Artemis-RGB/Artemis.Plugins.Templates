@@ -1,4 +1,4 @@
-﻿using Artemis.Core.Plugins.DataModelExpansions;
+﻿using Artemis.Core.DataModelExpansions;
 using $safeprojectname$.DataModels;
 
 namespace $safeprojectname$

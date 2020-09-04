@@ -35,14 +35,14 @@ namespace $safeprojectname$
             // When this gets called your activation requirements are no longer met and your module will stop displaying
         }
 
-        $if$ ($EnableProfiles$ != True)
         public override void Update(double deltaTime)
         {
+			$if$ ($EnableProfiles$ == True)// This is where you can add your update logic, this method is called before the profile is updated$endif$
         }
 
         public override void Render(double deltaTime, ArtemisSurface surface, SKCanvas canvas, SKImageInfo canvasInfo)
         {
-        }
-        $endif$
+			$if$ ($EnableProfiles$ == True)// This is where you may add extra render logic, this method is called before the profile is rendered$endif$
+        }        
     }
 }

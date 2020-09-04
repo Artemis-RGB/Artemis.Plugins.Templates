@@ -43,6 +43,12 @@
     <None Update="plugin.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+	<Content Include="Layouts\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(BuildingInsideVisualStudio)' == 'true'">
     <Exec Command="echo Copying resources to plugin output directory&#xD;&#xA;XCOPY &quot;$(ProjectDir)Images&quot; &quot;$(TargetDir)Images&quot; /s /q /i /y&#xD;&#xA;XCOPY &quot;$(ProjectDir)Layouts&quot; &quot;$(TargetDir)Layouts&quot; /s /q /i /y&#xD;&#xA;" />

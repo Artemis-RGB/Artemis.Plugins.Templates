@@ -50,9 +50,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(BuildingInsideVisualStudio)' == 'true'">
-    <Exec Command="echo Copying resources to plugin output directory&#xD;&#xA;XCOPY &quot;$(ProjectDir)Images&quot; &quot;$(TargetDir)Images&quot; /s /q /i /y&#xD;&#xA;XCOPY &quot;$(ProjectDir)Layouts&quot; &quot;$(TargetDir)Layouts&quot; /s /q /i /y&#xD;&#xA;" />
-  </Target>
 
   <!-- This may trigger another build (something related to the obj folder) so only run it if building inside VS -->
 	<Target Name="PostBuildPublish" AfterTargets="PostBuildEvent" Condition="'$(BuildingInsideVisualStudio)' == 'true'">

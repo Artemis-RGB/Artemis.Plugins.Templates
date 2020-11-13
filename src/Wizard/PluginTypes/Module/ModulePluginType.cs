@@ -51,7 +51,7 @@ namespace ArtemisPluginTemplates.PluginTypes.Module
         {
             if (filePath == "DataModels")
                 return _moduleInfo.EnableDataModel;
-            if (filePath == "DesignTimeResources.xaml" || filePath == "ViewModels" || filePath == "Views")
+            if (filePath == "ViewModels" || filePath == "Views")
                 return _moduleInfo.IncludeCustomTab;
 
             return true;

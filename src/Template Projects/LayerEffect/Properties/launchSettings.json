@@ -2,7 +2,7 @@
   "profiles": {
     "ModuleProject": {
       "commandName": "Executable",
-      "executablePath": "$ArtemisDirectoryEscaped$\\Artemis.UI.exe",
+      "executablePath": ".\\Artemis.UI.exe",
       "workingDirectory": "$ArtemisDirectoryEscaped$"
     }
   }

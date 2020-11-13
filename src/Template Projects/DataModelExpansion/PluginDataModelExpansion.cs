@@ -5,11 +5,11 @@ namespace $safeprojectname$
 {
     public class PluginDataModelExpansion : DataModelExpansion<PluginDataModel>
     {
-        public override void EnablePlugin()
+        public override void Enable()
         {
         }
 
-        public override void DisablePlugin()
+        public override void Disable()
         {
         }
 

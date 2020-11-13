@@ -43,7 +43,7 @@ namespace ArtemisPluginTemplates.PluginTypes.LayerBrush
 
         public bool ShouldAddProjectItem(string filePath)
         {
-            if (filePath == "DesignTimeResources.xaml" || filePath == "ViewModels" || filePath == "Views")
+            if (filePath == "ViewModels" || filePath == "Views")
                 return _layerBrushInfo.IncludeCustomDialog;
             if (filePath == "PluginLayerBrushRegular.cs")
                 return _layerBrushInfo.RenderType == "Regular";

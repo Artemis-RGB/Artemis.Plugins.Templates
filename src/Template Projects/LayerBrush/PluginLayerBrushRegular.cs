@@ -5,7 +5,7 @@ $if$ ($IncludeConfigurationWindow$ == True)using $safeprojectname$.ViewModels;$e
 
 namespace $safeprojectname$
 {
-    // This is the layer brush, the plugin has provided it to Artemis via a descriptor
+    // This is the layer brush, the plugin feature has provided it to Artemis via a descriptor
     // Artemis may create multiple instances of it, one instance for each profile element (folder/layer) it is applied to
     public class PluginLayerBrush : LayerBrush<MainPropertyGroup>
     {
@@ -22,8 +22,8 @@ namespace $safeprojectname$
         {
         }
 
-        public override void Render(SKCanvas canvas, SKImageInfo canvasInfo, SKPath path, SKPaint paint)
-        {
+        public override void Render(SKCanvas canvas, SKPath path, SKPaint paint)
+    {
         }
     }
 }

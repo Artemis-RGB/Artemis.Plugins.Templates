@@ -1,4 +1,4 @@
-﻿using Artemis.Core.LayerEffects;
+﻿using Artemis.UI.Shared.LayerEffects;
 using Artemis.UI.Shared.Services;
 using $safeprojectname$.PropertyGroups;
 

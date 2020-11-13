@@ -1,4 +1,4 @@
-﻿using Artemis.Core.LayerBrushes;
+﻿using Artemis.UI.Shared.LayerBrushes;
 using Artemis.UI.Shared.Services;
 using $safeprojectname$.PropertyGroups;
 

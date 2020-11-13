@@ -10,8 +10,8 @@ namespace $safeprojectname$
     // The core of your module. Hover over the method names to see a description.
     public class PluginModule : $BaseClass$
     {
-        // This is the beginning of your plugin life cycle. Use this instead of a constructor.
-        public override void EnablePlugin()
+        // This is the beginning of your plugin feature's life cycle. Use this instead of a constructor.
+        public override void Enable()
         {
             DisplayName = "$ModuleName$";
             DisplayIcon = "$ModuleIcon$";
@@ -19,8 +19,8 @@ namespace $safeprojectname$
             $if$ ($IncludeCustomTab$ == True)ModuleTabs = new List<ModuleTab> { new ModuleTab<CustomViewModel>("Custom tab") };$endif$
         }
 
-        // This is the end of your plugin life cycle.
-        public override void DisablePlugin()
+        // This is the end of your plugin feature's life cycle.
+        public override void Disable()
         {
             // Make sure to clean up resources where needed (dispose IDisposables etc.)
         }

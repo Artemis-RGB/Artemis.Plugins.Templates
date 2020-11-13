@@ -1,4 +1,4 @@
-﻿using Artemis.Core.Modules;
+﻿using Artemis.UI.Shared.Modules;
 using Artemis.UI.Shared.Services;
 
 namespace $safeprojectname$.ViewModels

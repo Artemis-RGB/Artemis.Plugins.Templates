@@ -1,23 +1,32 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <ShouldIncludeNativeSkiaSharp>false</ShouldIncludeNativeSkiaSharp>
     <AssemblyName>$safeprojectname$</AssemblyName>
     <RootNamespace>$safeprojectname$</RootNamespace>
+	<UseWPF>true</UseWPF>
 	<Platforms>x64</Platforms>
 	<GenerateDependencyFile>False</GenerateDependencyFile>
   </PropertyGroup>
+  
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   
-  <ItemGroup>    
-	<PackageReference Include="SkiaSharp" Version="$ext_SkiaSharpVersion$">
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="Stylet" Version="$ext_StyletVersion$">
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignExtensions" Version="$ext_MaterialDesignExtensionsVersion$" PrivateAssets="All" />
+    <PackageReference Include="MaterialDesignThemes" Version="$ext_MaterialDesignThemesVersion$" PrivateAssets="All" />
+    <PackageReference Include="FluentValidation" Version="$ext_FluentValidationVersion$" PrivateAssets="All" />
+    <PackageReference Include="SkiaSharp" Version="$ext_SkiaSharpVersion$" PrivateAssets="All" />
+    <PackageReference Include="Stylet" Version="$ext_StyletVersion$" PrivateAssets="All" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Page Include="Properties\DesignTimeResources.xaml" Condition="'$(DesignTime)'=='true' OR ('$(SolutionPath)'!='' AND Exists('$(SolutionPath)') AND '$(BuildingInsideVisualStudio)'!='true' AND '$(BuildingInsideExpressionBlend)'!='true')">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
+    </Page>
   </ItemGroup>
 
   <ItemGroup>

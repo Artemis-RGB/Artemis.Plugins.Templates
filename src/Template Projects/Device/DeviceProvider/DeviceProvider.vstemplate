@@ -18,8 +18,9 @@
   <TemplateContent>
     <Project TargetFileName="DeviceProvider.csproj" File="DeviceProvider.csproj" ReplaceParameters="true">
       <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="DesignTimeResources.xaml">DesignTimeResources.xaml</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="launchSettings.json">launchSettings.json</ProjectItem>
-      </Folder>      
+      </Folder>     
       <ProjectItem ReplaceParameters="true" TargetFileName="plugin.json">plugin.json</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="PluginDeviceProvider.cs">PluginDeviceProvider.cs</ProjectItem>
     </Project>

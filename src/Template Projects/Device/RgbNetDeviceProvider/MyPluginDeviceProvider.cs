@@ -1,44 +1,41 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using RGB.NET.Core;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace RgbNetDeviceProvider
 {
     // This is your RGB.NET device provider
     // See https://github.com/DarthAffe/RGB.NET for more info on RGB.NET and examples of other device providers
-    public class MyPluginDeviceProvider : IRGBDeviceProvider
+    public class MyPluginDeviceProvider : AbstractRGBDeviceProvider
     {
         private static MyPluginDeviceProvider _instance;
         public static MyPluginDeviceProvider Instance => _instance ?? new MyPluginDeviceProvider();
+
+        public MyPluginDeviceProvider()
+        {
+            if (_instance != null) throw new InvalidOperationException($"There can be only one instance of type {nameof(MyPluginDeviceProvider)}");
+            _instance = this;
+        }
 
         // You may remove this if not applicable for your device
         public static List<string> PossibleX86NativePaths { get; } = new List<string> { "x86/MyNativeSDK.dll" };
         public static List<string> PossibleX64NativePaths { get; } = new List<string> { "x64/MyNativeSDK.dll" };
 
-        public bool IsInitialized { get; private set; }
-        public IEnumerable<IRGBDevice> Devices { get; private set; }
-        public bool HasExclusiveAccess {get; private set;}
+        #region Overrides of AbstractRGBDeviceProvider
 
-        public bool Initialize(RGBDeviceType loadFilter = RGBDeviceType.All, bool exclusiveAccessIfPossible = false, bool throwExceptions = false)
+        protected override void InitializeSDK()
         {
-            try
-            {
-                // Initialize your device here
-            }
-            catch
-            {
-                if (throwExceptions) throw;
-                return false;
-            }
-
-            return true;
+            // Perform SDK initialization here
         }
 
-        public void Dispose()
+        /// <inheritdoc />
+        protected override IEnumerable<IRGBDevice> LoadDevices()
         {
-        }              
-
-        public void ResetDevices()
-        {
+            // Load your devices here and return them
+            return Enumerable.Empty<IRGBDevice>();
         }
+
+        #endregion
     }
 }

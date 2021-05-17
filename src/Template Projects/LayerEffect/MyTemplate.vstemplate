@@ -1,0 +1,48 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Artemis plugin - Layer Effect</Name>
+    <Description>A layer effect allows you to pre-process and post-process what is being rendered to a single layer or an entire folder</Description>
+    <ProjectType>csharp</ProjectType>
+    <LanguageTag>C#</LanguageTag>
+    <PlatformTag>windows</PlatformTag>
+    <ProjectTypeTag>Artemis</ProjectTypeTag>
+	<ProjectTypeTag>desktop</ProjectTypeTag>
+	<ProjectTypeTag>Plugin</ProjectTypeTag>
+    <ProjectTypeTag>extension</ProjectTypeTag>	
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>LayerEffect</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="LayerEffect.csproj" File="LayerEffect.csproj" ReplaceParameters="true">
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="DesignTimeResources.xaml">DesignTimeResources.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="launchSettings.json">launchSettings.json</ProjectItem>
+      </Folder>
+      <Folder Name=".vs" TargetFolderName=".vs" />
+      <Folder Name="PropertyGroups" TargetFolderName="PropertyGroups">
+        <ProjectItem ReplaceParameters="true" TargetFileName="MainPropertyGroup.cs">MainPropertyGroup.cs</ProjectItem>
+      </Folder>
+      <Folder Name="ViewModels" TargetFolderName="ViewModels">
+        <ProjectItem ReplaceParameters="true" TargetFileName="CustomViewModel.cs">CustomViewModel.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Views" TargetFolderName="Views">
+        <ProjectItem ReplaceParameters="true" TargetFileName="CustomView.xaml">CustomView.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="CustomView.xaml.cs">CustomView.xaml.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Bootstrapper.cs">Bootstrapper.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="plugin.json">plugin.json</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="PluginLayerEffect.cs">PluginLayerEffect.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="PluginLayerEffectProvider.cs">PluginLayerEffectProvider.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>ArtemisPluginTemplates, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=8a9dce45def4ee9e</Assembly>
+    <FullClassName>ArtemisPluginTemplates.WizardImplementation</FullClassName>
+  </WizardExtension>
+</VSTemplate>

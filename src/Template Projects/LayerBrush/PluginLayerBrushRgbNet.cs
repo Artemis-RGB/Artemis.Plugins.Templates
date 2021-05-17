@@ -2,7 +2,8 @@
 using RGB.NET.Brushes;
 using RGB.NET.Core;
 using $safeprojectname$.PropertyGroups;
-$if$ ($IncludeConfigurationWindow$ == True)using $safeprojectname$.ViewModels;$endif$
+$if$ ($IncludeConfigurationWindow$ == True)using Artemis.UI.Shared.LayerBrushes;
+using $safeprojectname$.ViewModels;$endif$
 
 namespace $safeprojectname$
 {

@@ -21,6 +21,7 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="DesignTimeResources.xaml">DesignTimeResources.xaml</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="launchSettings.json">launchSettings.json</ProjectItem>
       </Folder>     
+      <ProjectItem ReplaceParameters="true" TargetFileName="Bootstrapper.cs">Bootstrapper.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="plugin.json">plugin.json</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="PluginDeviceProvider.cs">PluginDeviceProvider.cs</ProjectItem>
     </Project>

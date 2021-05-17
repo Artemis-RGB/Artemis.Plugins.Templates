@@ -30,5 +30,12 @@ namespace $safeprojectname$
             // Let Artemis's RGB service know about our device provider
             _rgbService.AddDeviceProvider(RgbDeviceProvider);
         }
+
+        public override void Disable()
+        {
+        	// Before disposing your provider, let Artemis know it is gone
+            _rgbService.RemoveDeviceProvider(RgbDeviceProvider);
+            RgbDeviceProvider.Dispose();
+        }
     }
 }

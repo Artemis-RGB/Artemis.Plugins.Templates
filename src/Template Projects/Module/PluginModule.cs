@@ -40,7 +40,7 @@ namespace $safeprojectname$
 			$if$ ($EnableProfiles$ == True)// This is where you can add your update logic, this method is called before the profile is updated$endif$
         }
 
-        public override void Render(double deltaTime, ArtemisSurface surface, SKCanvas canvas, SKImageInfo canvasInfo)
+        public override void Render(double deltaTime, SKCanvas canvas, SKImageInfo canvasInfo)
         {
 			$if$ ($EnableProfiles$ == True)// This is where you may add extra render logic, this method is called before the profile is rendered$endif$
         }        

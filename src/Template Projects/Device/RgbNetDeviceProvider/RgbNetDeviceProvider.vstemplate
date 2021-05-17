@@ -18,7 +18,6 @@
   <TemplateContent>
     <Project TargetFileName="RgbNetDeviceProvider.csproj" File="RgbNetDeviceProvider.csproj" ReplaceParameters="true">
       <ProjectItem ReplaceParameters="true" TargetFileName="MyPluginDeviceProvider.cs">MyPluginDeviceProvider.cs</ProjectItem>
-      <ProjectItem ReplaceParameters="true" TargetFileName="MyPluginDeviceProviderLoader.cs">MyPluginDeviceProviderLoader.cs</ProjectItem>
     </Project>
   </TemplateContent>
 </VSTemplate>

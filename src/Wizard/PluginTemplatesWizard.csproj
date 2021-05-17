@@ -80,7 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="key.snk" />
-    <Content Include="logo-512.ico">
+    <Content Include="bow.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>

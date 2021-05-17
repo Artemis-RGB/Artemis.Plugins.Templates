@@ -1,7 +1,8 @@
 ﻿using Artemis.Core.LayerEffects;
 using SkiaSharp;
 using $safeprojectname$.PropertyGroups;
-$if$ ($IncludeConfigurationWindow$ == True)using $safeprojectname$.ViewModels;$endif$
+$if$ ($IncludeConfigurationWindow$ == True)using Artemis.UI.Shared.LayerEffects;
+using $safeprojectname$.ViewModels;$endif$
 
 namespace $safeprojectname$
 {
@@ -22,11 +23,11 @@ namespace $safeprojectname$
         {
         }
 
-        public override void PreProcess(SKCanvas canvas, SKPath renderBounds, SKPaint paint)
+        public override void PreProcess(SKCanvas canvas, SKRect renderBounds, SKPaint paint)
         {
         }
 
-        public override void PostProcess(SKCanvas canvas, SKPath renderBounds, SKPaint paint)
+        public override void PostProcess(SKCanvas canvas, SKRect renderBounds, SKPaint paint)
         {
         }
     }

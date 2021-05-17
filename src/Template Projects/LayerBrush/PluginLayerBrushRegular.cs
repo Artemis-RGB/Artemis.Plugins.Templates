@@ -1,7 +1,8 @@
 ﻿using Artemis.Core.LayerBrushes;
 using SkiaSharp;
 using $safeprojectname$.PropertyGroups;
-$if$ ($IncludeConfigurationWindow$ == True)using $safeprojectname$.ViewModels;$endif$
+$if$ ($IncludeConfigurationWindow$ == True)using Artemis.UI.Shared.LayerBrushes;
+using $safeprojectname$.ViewModels;$endif$
 
 namespace $safeprojectname$
 {
@@ -22,8 +23,8 @@ namespace $safeprojectname$
         {
         }
 
-        public override void Render(SKCanvas canvas, SKPath path, SKPaint paint)
-    {
+        public override void Render(SKCanvas canvas, SKRect bounds, SKPaint paint)
+        {
         }
-    }
+}
 }

@@ -2,6 +2,9 @@
   "Guid": "$ext_PluginGuid$",
   "Name": "$ext_PluginName$",
   "Description": "$ext_PluginDescription$",
+  "Author": "$ext_PluginAuthor$",
+  "Website": $ext_PluginWebsite$,
+  "Repository": $ext_PluginRepository$,
   "Version": "1.0.0.0",
   "Main": "$safeprojectname$.dll"
 }

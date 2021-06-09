@@ -18,17 +18,6 @@ namespace ArtemisPluginTemplates.PluginTypes.Module
 
             NameTextBox.Text = _moduleInfo.Name;
             IconTextBox.Text = _moduleInfo.Icon;
-
-            if (_moduleInfo.PriorityCategory == "Normal")
-                CategoryNormal.IsChecked = true;
-            else if (_moduleInfo.PriorityCategory == "Application")
-                CategoryApplication.IsChecked = true;
-            else if (_moduleInfo.PriorityCategory == "Overlay")
-                CategoryOverlay.IsChecked = true;
-            
-            EnableProfilesCheckBox.IsChecked = _moduleInfo.EnableProfiles;
-            EnableDataModelCheckBox.IsChecked = _moduleInfo.EnableDataModel;
-            AddCustomTabCheckBox.IsChecked = _moduleInfo.IncludeCustomTab;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -43,17 +32,6 @@ namespace ArtemisPluginTemplates.PluginTypes.Module
 
             _moduleInfo.Name = NameTextBox.Text;
             _moduleInfo.Icon = IconTextBox.Text;
-
-            if (CategoryNormal.IsChecked == true)
-                _moduleInfo.PriorityCategory = "Normal";
-            else if (CategoryApplication.IsChecked == true)
-                _moduleInfo.PriorityCategory = "Application";
-            else if (CategoryOverlay.IsChecked == true)
-                _moduleInfo.PriorityCategory = "Overlay";
-
-            _moduleInfo.EnableProfiles = EnableProfilesCheckBox.IsChecked == true;
-            _moduleInfo.EnableDataModel = EnableDataModelCheckBox.IsChecked == true;
-            _moduleInfo.IncludeCustomTab = AddCustomTabCheckBox.IsChecked == true;
 
             DialogResult = true;
             Close();

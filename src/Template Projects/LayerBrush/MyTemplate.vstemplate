@@ -39,7 +39,6 @@
       <ProjectItem ReplaceParameters="true" TargetFileName="plugin.json">plugin.json</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="PluginLayerBrush.cs">PluginLayerBrushRegular.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="PluginLayerBrush.cs">PluginLayerBrushPerLed.cs</ProjectItem>
-      <ProjectItem ReplaceParameters="true" TargetFileName="PluginLayerBrush.cs">PluginLayerBrushRgbNet.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="PluginLayerBrushProvider.cs">PluginLayerBrushProvider.cs</ProjectItem>
     </Project>
   </TemplateContent>

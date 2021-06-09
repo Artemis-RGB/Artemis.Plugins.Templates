@@ -31,14 +31,17 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
             <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,15,0,0">Enter some basic information about your plugin below. You can change this layer by editing plugin.json</TextBlock>
 
-            <Label Grid.Row="1" Grid.Column="1" Margin="0,15,0,0" Content="_Artemis executable*:" FontWeight="Bold" Target="{Binding ElementName=NameTextBox}" />
+            <Label Grid.Row="1" Grid.Column="1" Margin="0,5,0,0" Content="_Artemis executable*:" FontWeight="Bold" Target="{Binding ElementName=NameTextBox}" />
             <StackPanel Grid.Row="1"
                         Grid.Column="2"
-                        Margin="0,15,0,0"
+                        Margin="0,5,0,0"
                         Orientation="Horizontal">
                 <TextBox HorizontalAlignment="Left"
                          VerticalContentAlignment="Center"
@@ -48,26 +51,57 @@
                 <Button Height="23" Width="30" Margin="-1 0 0 0" Name="BrowseDirectoryButton" Click="BrowseDirectoryButton_OnClick">...</Button>
             </StackPanel>
 
-            <Label Grid.Row="2" Grid.Column="1" Margin="0,15,0,0" Content="_Name*:" FontWeight="Bold" Target="{Binding ElementName=NameTextBox}" />
+            <Label Grid.Row="2" Grid.Column="1" Margin="0,5,0,0" Content="_Name*:" FontWeight="Bold" Target="{Binding ElementName=NameTextBox}" />
             <TextBox Grid.Row="2"
                      Grid.Column="2"
                      HorizontalAlignment="Left"
                      VerticalContentAlignment="Center"
-                     Margin="0,15,0,0"
+                     Margin="0,5,0,0"
                      Height="23"
                      Name="NameTextBox"
                      Width="410" />
-            <Label Grid.Row="3" Grid.Column="1" Margin="0,15,0,0" Content="_Description*:" FontWeight="Bold" Target="{Binding ElementName=DescriptionTextBox}" />
+            <Label Grid.Row="3" Grid.Column="1" Margin="0,5,0,0" Content="_Description*:" FontWeight="Bold" Target="{Binding ElementName=DescriptionTextBox}" />
             <TextBox Grid.Row="3"
                      Grid.Column="2"
                      HorizontalAlignment="Left"
                      VerticalContentAlignment="Center"
-                     Margin="0,15,0,0"
+                     Margin="0,5,0,0"
                      Height="23"
                      Name="DescriptionTextBox"
                      Width="410" />
-            <Label Grid.Row="4" Grid.Column="1" Margin="0,15,0,0" Content="_Icon:" FontWeight="Bold" Target="{Binding ElementName=IconTextBox}" />
-            <StackPanel Grid.Row="4" Grid.Column="2" Margin="0,15,0,0">
+
+            <Label Grid.Row="4" Grid.Column="1" Margin="0,5,0,0" Content="_Author:" FontWeight="Bold" Target="{Binding ElementName=DescriptionTextBox}" />
+            <TextBox Grid.Row="4"
+                     Grid.Column="2"
+                     HorizontalAlignment="Left"
+                     VerticalContentAlignment="Center"
+                     Margin="0,5,0,0"
+                     Height="23"
+                     Name="AuthorTextBox"
+                     Width="410" />
+
+            <Label Grid.Row="5" Grid.Column="1" Margin="0,5,0,0" Content="_Website:" FontWeight="Bold" Target="{Binding ElementName=DescriptionTextBox}" />
+            <TextBox Grid.Row="5"
+                     Grid.Column="2"
+                     HorizontalAlignment="Left"
+                     VerticalContentAlignment="Center"
+                     Margin="0,5,0,0"
+                     Height="23"
+                     Name="WebsiteTextBox"
+                     Width="410" />
+
+            <Label Grid.Row="6" Grid.Column="1" Margin="0,5,0,0" Content="_Repository:" FontWeight="Bold" Target="{Binding ElementName=DescriptionTextBox}" />
+            <TextBox Grid.Row="6"
+                     Grid.Column="2"
+                     HorizontalAlignment="Left"
+                     VerticalContentAlignment="Center"
+                     Margin="0,5,0,0"
+                     Height="23"
+                     Name="RepositoryTextBox"
+                     Width="410" />
+
+            <Label Grid.Row="7" Grid.Column="1" Margin="0,5,0,0" Content="_Icon:" FontWeight="Bold" Target="{Binding ElementName=IconTextBox}" />
+            <StackPanel Grid.Row="7" Grid.Column="2" Margin="0,5,0,0">
                 <TextBox HorizontalAlignment="Left"
                          VerticalContentAlignment="Center"
                          Height="23"

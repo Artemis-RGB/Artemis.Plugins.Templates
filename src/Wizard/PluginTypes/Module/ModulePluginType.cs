@@ -32,28 +32,13 @@ namespace ArtemisPluginTemplates.PluginTypes.Module
                 _wizard.GatherPluginInfo(_replacementsDictionary, _customParams);
                 return;
             }
-
-            if (_moduleInfo.EnableProfiles)
-                _replacementsDictionary["$BaseClass$"] = _moduleInfo.EnableDataModel ? "ProfileModule<PluginDataModel>" : "ProfileModule";
-            else
-                _replacementsDictionary["$BaseClass$"] = _moduleInfo.EnableDataModel ? "Module<PluginDataModel>" : "Module";
-
+            
             _replacementsDictionary["$ModuleName$"] = _moduleInfo.Name;
             _replacementsDictionary["$ModuleIcon$"] = _moduleInfo.Icon;
-            _replacementsDictionary["$ModuleCategory$"] = _moduleInfo.PriorityCategory;
-
-            _replacementsDictionary["$EnableProfiles$"] = _moduleInfo.EnableProfiles.ToString();
-            _replacementsDictionary["$EnableDataModel$"] = _moduleInfo.EnableDataModel.ToString();
-            _replacementsDictionary["$IncludeCustomTab$"] = _moduleInfo.IncludeCustomTab.ToString();
         }
 
         public bool ShouldAddProjectItem(string filePath)
         {
-            if (filePath == "DataModels")
-                return _moduleInfo.EnableDataModel;
-            if (filePath == "ViewModels" || filePath == "Views")
-                return _moduleInfo.IncludeCustomTab;
-
             return true;
         }
     }

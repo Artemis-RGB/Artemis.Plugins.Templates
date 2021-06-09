@@ -58,7 +58,6 @@
       <DependentUpon>LayerBrushInfoDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="PluginTypes\LayerBrush\LayerBrushType.cs" />
-    <Compile Include="PluginTypes\DataModelExpansion\DataModelExpansionType.cs" />
     <Compile Include="PluginTypes\LayerEffect\LayerEffectInfo.cs" />
     <Compile Include="PluginTypes\LayerEffect\LayerEffectInfoDialog.xaml.cs">
       <DependentUpon>LayerEffectInfoDialog.xaml</DependentUpon>
@@ -93,10 +92,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="ProjectTemplates\Artemis plugin - Layer Brush.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ProjectTemplates\Artemis plugin - Data Model Expansion.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>

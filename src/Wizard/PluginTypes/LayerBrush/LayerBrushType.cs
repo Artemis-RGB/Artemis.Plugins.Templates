@@ -49,8 +49,6 @@ namespace ArtemisPluginTemplates.PluginTypes.LayerBrush
                 return _layerBrushInfo.RenderType == "Regular";
             if (filePath == "PluginLayerBrushPerLed.cs")
                 return _layerBrushInfo.RenderType == "PerLed";
-            if (filePath == "PluginLayerBrushRgbNet.cs")
-                return _layerBrushInfo.RenderType == "RgbNet";
 
             return true;
         }

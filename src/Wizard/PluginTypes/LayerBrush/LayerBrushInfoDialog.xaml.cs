@@ -24,8 +24,6 @@ namespace ArtemisPluginTemplates.PluginTypes.LayerBrush
                 RenderTypeRegular.IsChecked = true;
             else if (_layerBrushInfo.RenderType == "PerLed")
                 RenderTypePerLed.IsChecked = true;
-            else if (_layerBrushInfo.RenderType == "RgbNet")
-                RenderTypeRgbNet.IsChecked = true;
 
             IncludeDialogCheckBox.IsChecked = _layerBrushInfo.IncludeCustomDialog;
         }
@@ -48,8 +46,6 @@ namespace ArtemisPluginTemplates.PluginTypes.LayerBrush
                 _layerBrushInfo.RenderType = "Regular";
             else if (RenderTypePerLed.IsChecked == true)
                 _layerBrushInfo.RenderType = "PerLed";
-            else if (RenderTypeRgbNet.IsChecked == true)
-                _layerBrushInfo.RenderType = "RgbNet";
             
             _layerBrushInfo.IncludeCustomDialog = IncludeDialogCheckBox.IsChecked == true;
 

@@ -66,13 +66,6 @@
                              Margin="5,5,0,0"
                              Name="RenderTypePerLed"
                              ToolTip="A brush that does not render pixels but gives each LED a specific color" />
-                <RadioButton Content="_RGB.NET"
-                             Margin="5,5,0,0"
-                             Name="RenderTypeRgbNet"
-                             ToolTip="An RGB.NET-based brush that interacts directly with RGB.NET" />
-                <TextBlock TextWrapping="Wrap" Foreground="DarkRed" Margin="5 0">
-                    Warning: RGB.NET-based brushes do not support transformations and layer effects and always render on top of other layer types.
-                </TextBlock>
             </StackPanel>
 
             <CheckBox Grid.Row="5"

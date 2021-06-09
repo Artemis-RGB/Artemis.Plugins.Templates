@@ -6,7 +6,6 @@ using System.Linq;
 using ArtemisPluginTemplates.Dialogs;
 using ArtemisPluginTemplates.Models;
 using ArtemisPluginTemplates.PluginTypes;
-using ArtemisPluginTemplates.PluginTypes.DataModelExpansion;
 using ArtemisPluginTemplates.PluginTypes.Device;
 using ArtemisPluginTemplates.PluginTypes.LayerBrush;
 using ArtemisPluginTemplates.PluginTypes.LayerEffect;
@@ -18,7 +17,11 @@ namespace ArtemisPluginTemplates
 {
     public class WizardImplementation : IWizard
     {
-        private readonly PluginInfo _pluginInfo = new PluginInfo {Guid = Guid.NewGuid()};
+        private readonly PluginInfo _pluginInfo = new PluginInfo
+        {
+            Guid = Guid.NewGuid(),
+            Author = Environment.UserName
+        };
         private IPluginType _pluginType;
 
         public void RunStarted(object automationObject, Dictionary<string, string> replacementsDictionary, WizardRunKind runKind, object[] customParams)
@@ -75,9 +78,11 @@ namespace ArtemisPluginTemplates
             replacementsDictionary["$PluginGuid$"] = _pluginInfo.Guid.ToString();
             replacementsDictionary["$PluginName$"] = _pluginInfo.Name;
             replacementsDictionary["$PluginDescription$"] = _pluginInfo.Description;
+            replacementsDictionary["$PluginAuthor$"] = _pluginInfo.Author;
+            replacementsDictionary["$PluginWebsite$"] = _pluginInfo.Website != null ? $"\"{_pluginInfo.Website}\"" : "null";
+            replacementsDictionary["$PluginRepository$"] = _pluginInfo.Repository != null ? $"\"{_pluginInfo.Repository}\"" : "null";
             if (_pluginInfo.Icon != null)
                 replacementsDictionary["$PluginIcon$"] = _pluginInfo.Icon;
-
 
             // customParams contains the path to the template
             if (customParams.Any(p => p.ToString().Contains("Module")))
@@ -86,8 +91,6 @@ namespace ArtemisPluginTemplates
                 _pluginType = new LayerBrushType(this, replacementsDictionary, customParams, _pluginInfo);
             else if (customParams.Any(p => p.ToString().Contains("Layer Effect")))
                 _pluginType = new LayerEffectType(this, replacementsDictionary, customParams, _pluginInfo);
-            else if (customParams.Any(p => p.ToString().Contains("Data Model Expansion")))
-                _pluginType = new DataModelExpansionType();
             else if (customParams.Any(p => p.ToString().Contains("Device")))
                 _pluginType = new DeviceType(replacementsDictionary);
             else

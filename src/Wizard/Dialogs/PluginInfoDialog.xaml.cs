@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Windows;
 using ArtemisPluginTemplates.Models;
@@ -21,6 +22,9 @@ namespace ArtemisPluginTemplates.Dialogs
             NameTextBox.Text = _pluginInfo.Name;
             DescriptionTextBox.Text = _pluginInfo.Description;
             IconTextBox.Text = _pluginInfo.Icon;
+            AuthorTextBox.Text = _pluginInfo.Author;
+            WebsiteTextBox.Text = _pluginInfo.Website?.ToString();
+            RepositoryTextBox.Text = _pluginInfo.Repository?.ToString();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -43,6 +47,7 @@ namespace ArtemisPluginTemplates.Dialogs
                     MessageBoxImage.Exclamation);
                 return;
             }
+
             // Ensure the Artemis.Core.dll and Artemis.UI.Shared.dll are in the same directory
             var artemisDirectory = Path.GetDirectoryName(ArtemisExecutableTextBox.Text);
             if (!File.Exists(Path.Combine(artemisDirectory, "Artemis.Core.dll")))
@@ -54,6 +59,7 @@ namespace ArtemisPluginTemplates.Dialogs
                     MessageBoxImage.Exclamation);
                 return;
             }
+
             if (!File.Exists(Path.Combine(artemisDirectory, "Artemis.UI.Shared.dll")))
             {
                 MessageBox.Show(
@@ -63,11 +69,36 @@ namespace ArtemisPluginTemplates.Dialogs
                     MessageBoxImage.Exclamation);
                 return;
             }
-            
+
             _pluginInfo.ArtemisDirectory = artemisDirectory;
             _pluginInfo.Name = NameTextBox.Text;
             _pluginInfo.Description = DescriptionTextBox.Text;
             _pluginInfo.Icon = IconTextBox.Text;
+            _pluginInfo.Author = AuthorTextBox.Text;
+
+            try
+            {
+                _pluginInfo.Website = !string.IsNullOrWhiteSpace(WebsiteTextBox.Text)
+                    ? new Uri(WebsiteTextBox.Text, UriKind.Absolute)
+                    : null;
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Failed to parse website URL", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                return;
+            }
+
+            try
+            {
+                _pluginInfo.Repository = !string.IsNullOrWhiteSpace(RepositoryTextBox.Text)
+                    ? new Uri(RepositoryTextBox.Text, UriKind.Absolute)
+                    : null;
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Failed to parse repository URL", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                return;
+            }
 
             DialogResult = true;
             Close();

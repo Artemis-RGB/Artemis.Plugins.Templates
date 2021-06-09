@@ -2,6 +2,9 @@
   "Guid": "$PluginGuid$",
   "Name": "$PluginName$",
   "Description": "$PluginDescription$",
+  "Author": "$PluginAuthor$",
+  "Website": $PluginWebsite$,
+  "Repository": $PluginRepository$,
   "Version": "1.0.0.0",
   "Main": "$safeprojectname$.dll"
 }

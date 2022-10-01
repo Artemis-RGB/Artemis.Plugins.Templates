@@ -4,7 +4,7 @@ on: push
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: linux-latest
 
     steps:
       - name: Setup .NET 6.0
@@ -18,7 +18,9 @@ jobs:
       - name: Build
         run: dotnet publish -c Release src
           
-      - name: Upload
-        uses: actions/upload-artifact@v3
-        with:
-          path: src/Artemis.Plugins.RepositoryTemplate/bin/x64/Release/net6.0/publish
+      # You'll need to add each plugin as an artifact here
+      #Example:
+      # - name: Upload
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     path: src/MyPluginFolder/bin/x64/Release/net6.0/publish

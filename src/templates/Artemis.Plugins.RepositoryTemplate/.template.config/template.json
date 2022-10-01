@@ -13,63 +13,12 @@
         "language": "C#",
         "type": "solution"
     },
-    "sourceName": "Artemis.Plugins.RepositoryTemplate",
-    "defaultName": "Artemis.Plugins.MyPlugin",
+    "sourceName": "Artemis.Plugins",
+    "defaultName": "Artemis.Plugins.MyPlugins",
     "preferNameDirectory": true,
-    "primaryOutputs": [
-        { "path": "sln/Artemis.Plugins.sln" }
-    ],
     "guids": [
-        "33E90CC9-8BF3-45A3-B2CF-EE66D50D2775",
-        "388738F7-345C-4E00-ADCF-2D5F8E99DCAD"
+        "41CC9D02-7D51-438F-ACFC-A4B44245D98D"
     ],
-    "symbols": {
-        "pluginName": {
-            "displayName": "Plugin Name",
-            "type": "parameter",
-            "replaces": "__PluginName__",
-            "isRequired": false,
-            "datatype": "string",
-            "description": "The name of the plugin shown in the UI",
-            "defaultValue": "Plugin Name"
-        },
-        "pluginDescription": {
-            "displayName": "Plugin Description",
-            "type": "parameter",
-            "replaces": "__PluginDescription__",
-            "isRequired": false,
-            "datatype": "string",
-            "description": "The description of the plugin shown in the UI",
-            "defaultValue": "Plugin Description"
-        },
-        "author": {
-            "displayName": "Author",
-            "type": "parameter",
-            "replaces": "__Author__",
-            "isRequired": false,
-            "datatype": "string",
-            "description": "The author of the plugin",
-            "defaultValue": ""
-        },
-        "website": {
-            "displayName": "Website",
-            "type": "parameter",
-            "replaces": "__Website__",
-            "isRequired": false,
-            "datatype": "string",
-            "description": "The website of the plugin",
-            "defaultValue": ""
-        },
-        "repository": {
-            "displayName": "Repository",
-            "type": "parameter",
-            "replaces": "__Repository__",
-            "isRequired": false,
-            "datatype": "string",
-            "description": "The repository of the plugin",
-            "defaultValue": ""
-        }
-    },
     "sources": [
         {
             "rename": {

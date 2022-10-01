@@ -14,7 +14,7 @@
         "type": "project"
     },
     "sourceName": "Artemis.Plugins.LayerBrushes.Template",
-    "defaultName": "Artemis.Plugins.LayerBrushes.MyLayerBrush",
+    "defaultName": "Artemis.Plugins.LayerBrushes.LayerBrush",
     "preferNameDirectory": true,
     "guids": [
         "33E90CC9-8BF3-45A3-B2CF-EE66D50D2775"

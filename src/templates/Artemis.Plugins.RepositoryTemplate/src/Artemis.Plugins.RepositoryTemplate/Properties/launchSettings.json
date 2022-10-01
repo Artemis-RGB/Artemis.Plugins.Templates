@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "Artemis": {
-      "commandName": "Executable",
-      "executablePath": "C:\\Program Files\\Artemis\\Artemis.UI.Windows.exe"
-    }
-  }
-}

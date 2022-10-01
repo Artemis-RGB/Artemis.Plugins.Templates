@@ -14,7 +14,7 @@
         "type": "project"
     },
     "sourceName": "Artemis.Plugins.Modules.Template",
-    "defaultName": "Artemis.Plugins.Modules.MyModule",
+    "defaultName": "Artemis.Plugins.Modules.Module",
     "preferNameDirectory": true,
     "guids": [
         "33E90CC9-8BF3-45A3-B2CF-EE66D50D2775"

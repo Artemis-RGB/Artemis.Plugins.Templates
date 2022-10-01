@@ -30,19 +30,22 @@ dotnet new --update-apply
 
 ## Usage
 
-To get started creating plugins for Artemis, the repository template is recommended. Tt comes with gitignore to keep your project clean, and GitHub Actions set up to automatically build and publish your plugin. It's also very easy to add more plugins later.
+To get started creating plugins for Artemis, the repository template is recommended. It comes with a gitignore to keep your project clean, and GitHub Actions set up to automatically build and publish your plugins.
 
+This repository cannot be created in Visual Studio like the plugin projects, the dotnet CLI needs to be used.
 To create a new plugin repository, run the following command in a new empty folder:
 
 ```bash
-dotnet new artemis-plugin-repo
+dotnet new artemis-plugin-repo -n Artemis.Plugins.SolutionName
 ```
 
-This repository cannot be created in Visual Studio like the plugin projects, it is intended for use with the dotnet CLI.
+The name can be anything you want, like your GitHub username or something else that describes the plugin(s).
 
-Any templates after this point are intended to be added to an existing repository created by the repository template, which can be done in two ways:
-- Visual Studio  via the `Add > New Project...` menu
--  dotnet CLI via the given commands.
+You now have a repository with an empty solution. You can add any of the plugin templates as new projects.
+
+This can be done in two ways:
+- Visual Studio via the `Add > New Project...` menu
+- dotnet CLI via the given commands.
 
 ## Available Templates
 

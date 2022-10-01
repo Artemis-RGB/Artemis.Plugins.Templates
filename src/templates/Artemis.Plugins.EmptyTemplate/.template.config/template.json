@@ -23,25 +23,25 @@
             "displayName": "Plugin Name",
             "type": "parameter",
             "replaces": "__PluginName__",
-            "isRequired": true,
+            "isRequired": false,
             "datatype": "string",
             "description": "The name of the plugin shown in the UI",
-            "defaultValue": ""
+            "defaultValue": "Plugin Name"
         },
         "pluginDescription": {
             "displayName": "Plugin Description",
             "type": "parameter",
             "replaces": "__PluginDescription__",
-            "isRequired": true,
+            "isRequired": false,
             "datatype": "string",
             "description": "The description of the plugin shown in the UI",
-            "defaultValue": ""
+            "defaultValue": "Plugin Description"
         },
         "author": {
             "displayName": "Author",
             "type": "parameter",
             "replaces": "__Author__",
-            "isRequired": true,
+            "isRequired": false,
             "datatype": "string",
             "description": "The author of the plugin",
             "defaultValue": ""

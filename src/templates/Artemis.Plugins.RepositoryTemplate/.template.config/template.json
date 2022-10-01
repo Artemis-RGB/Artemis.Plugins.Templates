@@ -13,12 +13,10 @@
         "language": "C#",
         "type": "solution"
     },
-    "preferNameDirectory": true,
-
     "sourceName": "Artemis.Plugins.RepositoryTemplate",
     "defaultName": "Artemis.Plugins.MyPlugin",
     "primaryOutputs": [
-        { "path": "Artemis.Plugins.sln" }
+        { "path": "sln/Artemis.Plugins.sln" }
     ],
 
     "guids": [

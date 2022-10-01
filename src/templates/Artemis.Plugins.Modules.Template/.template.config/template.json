@@ -1,20 +1,20 @@
 {
     "$schema": "http://json.schemastore.org/template",
-    "name": "Artemis Plugin - Empty",
-    "description": "Creates an empty Artemis plugin project.",
+    "name": "Artemis Plugin - Module",
+    "description": "Creates a new Artemis Plugin Module.",
     "author": "diogotr7",
-    "shortName": "artemis-plugin-empty",
-    "identity": "Artemis.Plugins.EmptyTemplate",
+    "shortName": "artemis-plugin-module",
+    "identity": "Artemis.Plugins.Modules.Template",
     "classifications": [
         "Artemis",
         "Plugin"
-    ],    
+    ],
     "tags": {
         "language": "C#",
         "type": "project"
     },
-    "sourceName": "Artemis.Plugins.EmptyTemplate",
-    "defaultName": "Artemis.Plugins.MyPlugin",
+    "sourceName": "Artemis.Plugins.Modules.Template",
+    "defaultName": "Artemis.Plugins.Modules.MyModule",
     "guids": [
         "33E90CC9-8BF3-45A3-B2CF-EE66D50D2775"
     ],
@@ -24,7 +24,7 @@
             "type": "parameter",
             "replaces": "__PluginName__",
             "isRequired": true,
-            "datatype": "string",
+            "datatype": "text",
             "description": "The name of the plugin shown in the UI",
             "defaultValue": ""
         },
@@ -33,7 +33,7 @@
             "type": "parameter",
             "replaces": "__PluginDescription__",
             "isRequired": true,
-            "datatype": "string",
+            "datatype": "text",
             "description": "The description of the plugin shown in the UI",
             "defaultValue": ""
         },
@@ -42,7 +42,7 @@
             "type": "parameter",
             "replaces": "__Author__",
             "isRequired": true,
-            "datatype": "string",
+            "datatype": "text",
             "description": "The author of the plugin",
             "defaultValue": ""
         },
@@ -51,7 +51,7 @@
             "type": "parameter",
             "replaces": "__Website__",
             "isRequired": false,
-            "datatype": "string",
+            "datatype": "text",
             "description": "The website of the plugin",
             "defaultValue": ""
         },
@@ -60,9 +60,19 @@
             "type": "parameter",
             "replaces": "__Repository__",
             "isRequired": false,
-            "datatype": "string",
+            "datatype": "text",
             "description": "The repository of the plugin",
             "defaultValue": ""
+        },
+        "moduleName": {
+            "displayName": "Module Name",
+            "type": "parameter",
+            "replaces": "__ModuleName__",
+            "fileRename": "__ModuleName__",
+            "isRequired": true,
+            "datatype": "text",
+            "description": "The name of the module. (Do not include the word 'Module' in the name)",
+            "defaultValue": "Custom"
         }
     }
 }

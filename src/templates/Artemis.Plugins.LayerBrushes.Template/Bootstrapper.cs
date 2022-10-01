@@ -1,7 +1,7 @@
 using Artemis.Core;
 using Artemis.UI.Shared;
 
-namespace Artemis.Plugins.ModuleTemplate;
+namespace Artemis.Plugins.LayerBrushes.Template;
 
 public class Bootstrapper : PluginBootstrapper
 {

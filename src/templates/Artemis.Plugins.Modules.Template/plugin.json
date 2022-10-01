@@ -7,7 +7,7 @@
     "Repository": "__Repository__",
     "Icon": "QuestionMark",
     "Version": "1.0.0.0",
-    "Main": "Artemis.Plugins.ModuleTemplate.dll",
+    "Main": "Artemis.Plugins.Modules.Template.dll",
     "AutoEnableProperties": true,
     "RequiresAdmin": false,
     "Platforms": "Windows,Linux,OSX",

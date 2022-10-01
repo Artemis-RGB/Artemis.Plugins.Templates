@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using Artemis.Core;
 using Artemis.Core.Modules;
-using Artemis.Plugins.ModuleTemplate.DataModels;
+using Artemis.Plugins.Modules.Template.DataModels;
 
-namespace Artemis.Plugins.ModuleTemplate;
+namespace Artemis.Plugins.Modules.Template;
 
 public class __ModuleName__Module : Module<__ModuleName__DataModel>
 {

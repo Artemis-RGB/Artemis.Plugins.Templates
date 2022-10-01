@@ -15,10 +15,10 @@
     },
     "sourceName": "Artemis.Plugins.RepositoryTemplate",
     "defaultName": "Artemis.Plugins.MyPlugin",
+    "preferNameDirectory": true,
     "primaryOutputs": [
         { "path": "sln/Artemis.Plugins.sln" }
     ],
-
     "guids": [
         "33E90CC9-8BF3-45A3-B2CF-EE66D50D2775",
         "388738F7-345C-4E00-ADCF-2D5F8E99DCAD"

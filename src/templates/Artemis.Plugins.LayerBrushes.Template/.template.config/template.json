@@ -15,6 +15,7 @@
     },
     "sourceName": "Artemis.Plugins.LayerBrushes.Template",
     "defaultName": "Artemis.Plugins.LayerBrushes.MyLayerBrush",
+    "preferNameDirectory": true,
     "guids": [
         "33E90CC9-8BF3-45A3-B2CF-EE66D50D2775"
     ],
@@ -68,6 +69,7 @@
             "displayName": "Layer Brush Name",
             "type": "parameter",
             "replaces": "__LayerBrushName__",
+            "fileRename": "__LayerBrushName__",
             "isRequired": true,
             "datatype": "string",
             "description": "The name of the layer brush (do not include 'LayerBrush' at the end)",

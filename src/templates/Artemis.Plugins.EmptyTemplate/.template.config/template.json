@@ -15,6 +15,7 @@
     },
     "sourceName": "Artemis.Plugins.EmptyTemplate",
     "defaultName": "Artemis.Plugins.MyPlugin",
+    "preferNameDirectory": true,
     "guids": [
         "33E90CC9-8BF3-45A3-B2CF-EE66D50D2775"
     ],

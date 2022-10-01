@@ -73,7 +73,7 @@ dotnet new artemis-plugin-layerbrush -n Artemis.Plugins.LayerBrushes.ExampleLaye
 
 Creates an Artemis plugin project with a single layer brush. This is used to add a new brush to the editor, such as a gradient or a noise brush.
 
-### Layer Effect Plugin (WIP)
+### Layer Effect Plugin
 
 ```bash
 dotnet new artemis-plugin-layereffect -n Artemis.Plugins.LayerEffects.ExampleLayerEffect --layerEffectName Example

@@ -1,0 +1,79 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "name": "Artemis Plugin - Layer Effect",
+    "description": "Creates a Layer Effect Artemis plugin project.",
+    "author": "diogotr7",
+    "shortName": "artemis-plugin-layereffect",
+    "identity": "Artemis.Plugins.LayerEffects.Template",
+    "classifications": [
+        "Artemis",
+        "Plugin"
+    ],    
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "sourceName": "Artemis.Plugins.LayerEffects.Template",
+    "defaultName": "Artemis.Plugins.LayerEffects.LayerEffect",
+    "preferNameDirectory": true,
+    "guids": [
+        "33E90CC9-8BF3-45A3-B2CF-EE66D50D2775"
+    ],
+    "symbols": {
+        "pluginName": {
+            "displayName": "Plugin Name",
+            "type": "parameter",
+            "replaces": "__PluginName__",
+            "isRequired": false,
+            "datatype": "string",
+            "description": "The name of the plugin shown in the UI",
+            "defaultValue": "Plugin Name"
+        },
+        "pluginDescription": {
+            "displayName": "Plugin Description",
+            "type": "parameter",
+            "replaces": "__PluginDescription__",
+            "isRequired": false,
+            "datatype": "string",
+            "description": "The description of the plugin shown in the UI",
+            "defaultValue": "Plugin Description"
+        },
+        "author": {
+            "displayName": "Author",
+            "type": "parameter",
+            "replaces": "__Author__",
+            "isRequired": false,
+            "datatype": "string",
+            "description": "The author of the plugin",
+            "defaultValue": ""
+        },
+        "website": {
+            "displayName": "Website",
+            "type": "parameter",
+            "replaces": "__Website__",
+            "isRequired": false,
+            "datatype": "string",
+            "description": "The website of the plugin",
+            "defaultValue": ""
+        },
+        "repository": {
+            "displayName": "Repository",
+            "type": "parameter",
+            "replaces": "__Repository__",
+            "isRequired": false,
+            "datatype": "string",
+            "description": "The repository of the plugin",
+            "defaultValue": ""
+        },
+        "layerEffectName": {
+            "displayName": "Layer Effect Name",
+            "type": "parameter",
+            "replaces": "__LayerEffectName__",
+            "fileRename": "__LayerEffectName__",
+            "isRequired": true,
+            "datatype": "string",
+            "description": "The name of the layer Effect (do not include 'LayerEffect' at the end)",
+            "defaultValue": "Custom"
+        }
+    }
+}

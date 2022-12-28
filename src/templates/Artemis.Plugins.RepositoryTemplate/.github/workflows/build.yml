@@ -23,4 +23,5 @@ jobs:
       # - name: Upload
       #   uses: actions/upload-artifact@v3
       #   with:
+      #     name: MyArtifactName
       #     path: src/MyPluginFolder/bin/x64/Release/net6.0/publish

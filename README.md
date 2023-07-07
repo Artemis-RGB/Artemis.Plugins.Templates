@@ -5,8 +5,9 @@ This repository contains templates for Artemis plugins. Available on Nuget ![Nug
 ## Pre-requisites
 
 - [.NET 6 SDK](https://dotnet.microsoft.com/download) (required)
-- Code editor of your choice (optional):
-    - [Visual Studio 2022](https://visualstudio.microsoft.com/vs/community/) (recommended)
+- Code editor of your choice (recommended):
+    - [Rider](https://www.jetbrains.com/rider/)
+    - [Visual Studio 2022](https://visualstudio.microsoft.com/vs/community/)
     - [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Installation
@@ -14,18 +15,18 @@ This repository contains templates for Artemis plugins. Available on Nuget ![Nug
 To install the templates, run the following command:
 
 ```bash
-dotnet new -i ArtemisRGB.Templates
+dotnet new install ArtemisRGB.Templates
 ```
 
 You can see all available templates by running 
 ```bash
-dotnet new -l artemis
+dotnet new list artemis
 ```
 
 To update the templates, run the following command:
 
 ```bash
-dotnet new --update-apply
+dotnet new update
 ```
 
 ## Usage

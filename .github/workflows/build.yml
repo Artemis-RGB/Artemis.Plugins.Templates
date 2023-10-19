@@ -10,5 +10,11 @@ jobs:
       - name: Clone
         uses: actions/checkout@v3
 
-      - name: Build
-        run: dotnet build src
+      - name: Install templates
+        run: dotnet new --install src/templates
+
+      - name: Create Empty plugin
+        run: dotnet new artemis-plugin-empty -n Artemis.Plugins.ExamplePlugin
+      
+      - name: Build new plugin
+        run: dotnet build Artemis.Plugins.ExamplePlugin/Artemis.Plugins.ExamplePlugin.csproj -c Release

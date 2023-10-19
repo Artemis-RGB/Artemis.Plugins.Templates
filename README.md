@@ -2,13 +2,16 @@
 
 This repository contains templates for Artemis plugins. Available on Nuget ![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/ArtemisRGB.Templates)
 
+These templates are intended to be used if you know your way around Artemis plugins, especially if you already have a repository with some plugins and want to add a new one.
+If you're starting out with Artemis plugins, it's recommended to use the [Artemis Template Repository](https://github.com/Artemis-RGB/Artemis.PluginTemplate) on Github.
+
 ## Pre-requisites
 
-- [.NET 6 SDK](https://dotnet.microsoft.com/download) (required)
+- [.NET SDK](https://dotnet.microsoft.com/download) (required)
 - Code editor of your choice (recommended):
-    - [Rider](https://www.jetbrains.com/rider/)
-    - [Visual Studio 2022](https://visualstudio.microsoft.com/vs/community/)
-    - [Visual Studio Code](https://code.visualstudio.com/)
+  - [Rider](https://www.jetbrains.com/rider/)
+  - [Visual Studio 2022](https://visualstudio.microsoft.com/vs/community/)
+  - [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Installation
 
@@ -18,7 +21,8 @@ To install the templates, run the following command:
 dotnet new install ArtemisRGB.Templates
 ```
 
-You can see all available templates by running 
+You can see all available templates by running
+
 ```bash
 dotnet new list artemis
 ```
@@ -30,25 +34,6 @@ dotnet new update
 ```
 
 ## Usage
-
-To get started creating plugins for Artemis, the repository template is recommended. It comes with a gitignore to keep your project clean, and GitHub Actions set up to automatically build and publish your plugins.
-
-This repository cannot be created in Visual Studio like the plugin projects, the dotnet CLI needs to be used.
-To create a new plugin repository, run the following command in a new empty folder:
-
-```bash
-dotnet new artemis-plugin-repo -n Artemis.Plugins.SolutionName
-```
-
-The name can be anything you want, like your GitHub username or something else that describes the plugin(s).
-
-You now have a repository with an empty solution. You can add any of the plugin templates as new projects.
-
-This can be done in two ways:
-- Visual Studio via the `Add > New Project...` menu
-- dotnet CLI via the given commands.
-
-## Available Templates
 
 ### Empty Plugin
 

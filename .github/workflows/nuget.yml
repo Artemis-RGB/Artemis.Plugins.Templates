@@ -1,22 +1,17 @@
 name: Publish Template Nuget packages
 
 on: 
-  push:
-    branches:
-      - master
+    push:
+      tags:
+        - '*'
 
 jobs:
   push:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Setup .NET 6.0
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: '6.0.x'
-
       - name: Clone
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Pack
         run: dotnet pack -c Release src/Artemis.Templates.csproj

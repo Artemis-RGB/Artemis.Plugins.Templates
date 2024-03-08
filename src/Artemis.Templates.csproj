@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>1.5.0</PackageVersion>
+    <PackageVersion>1.6.0</PackageVersion>
     <PackageId>ArtemisRGB.Templates</PackageId>
     <PackageIcon>icon.png</PackageIcon>
     <Title>Artemis Templates</Title>

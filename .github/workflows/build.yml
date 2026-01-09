@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - name: Clone
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
 
       - name: Install templates
         run: dotnet new --install src/templates
